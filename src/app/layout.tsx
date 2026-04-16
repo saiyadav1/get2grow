@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
+import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
+const bricolageGrotesque = Bricolage_Grotesque({
+  variable: "--font-bricolage",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
   title: "Get 2 Grow",
-  description: "We help entrepreneurs build profitable personal brands through short-form content",
+  description:
+    "We help entrepreneurs build profitable personal brands through short-form content",
   icons: {
     icon: "/assets/g2g_logo.png",
   },
@@ -23,9 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${dmSans.variable} font-sans antialiased`}
-      >
+      <body className={`${bricolageGrotesque.variable} font-sans antialiased `}>
         {children}
       </body>
     </html>

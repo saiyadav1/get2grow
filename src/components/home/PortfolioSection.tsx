@@ -29,11 +29,19 @@ export default function PortfolioSection() {
   ];
 
   if (!mounted) {
-    return <section className="min-h-screen bg-brand-black" />;
+    return <section className="min-h-screen " />;
   }
 
   return (
-    <section className="py-20 bg-brand-black overflow-hidden text-white relative">
+    <section className="py-20  overflow-hidden text-white relative"
+      style={{
+        backgroundImage: `
+                repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, transparent 1px, transparent 80px),
+                repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, transparent 1px, transparent 80px)
+            `,
+        backgroundSize: '80px 80px'
+      }}
+    >
       {/* ✅ Load Wistia ONCE */}
       <Script
         src="https://fast.wistia.com/assets/external/E-v1.js"
@@ -84,7 +92,7 @@ export default function PortfolioSection() {
             <SwiperSlide key={id}>
               <div className="max-w-[200px] md:max-w-[260px] mx-auto">
                 <div className="relative rounded-[2rem] overflow-hidden bg-black aspect-[9/16] shadow-[0_0_50px_rgba(238,157,43,0.1)] border border-white/5 transition-all">
-                  
+
                   {/* ✅ Render embed ONLY when Wistia is ready */}
                   {wistiaReady && (
                     <div

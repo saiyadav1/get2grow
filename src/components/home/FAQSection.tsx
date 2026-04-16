@@ -23,16 +23,16 @@ export default function FAQSection() {
     ];
 
     return (
-        <section className="py-20 bg-gray-50">
+        <section className="py-20">
             <div className="container mx-auto px-4 max-w-4xl">
                 <div className="flex flex-col md:flex-row gap-8 mb-16">
                     <div className="w-full md:w-1/2">
-                        <h2 className="text-[36px] font-bold text-[#333]">
-                            Popular <span className="text-[#ee9d2b]">FAQs</span>
+                        <h2 className="text-[36px] font-bold text-white">
+                            Popular <span className="text-primary">FAQs</span>
                         </h2>
                     </div>
                     <div className="w-full md:w-1/2">
-                        <p className="text-gray-600 text-lg">
+                        <p className="text-gray-300 text-lg">
                             Have question? We got answers. Here are the most frequently asked questions.
                         </p>
                     </div>
@@ -52,14 +52,14 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-100">
+        <div className="bg-[#0a0a0a] rounded-xl p-6 md:p-8 shadow-sm border border-white/5 hover:border-primary/30 transition-colors">
             <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="flex justify-between items-start w-full text-left focus:outline-none"
             >
-                <h3 className="text-xl font-bold text-gray-800 pr-8">{question}</h3>
-                <span className={`transform transition-transform duration-300 text-[#ee9d2b] font-bold text-2xl ${isOpen ? "rotate-180" : ""}`}>
-                    v
+                <h3 className="text-xl font-bold text-white pr-8 group-hover:text-primary transition-colors">{question}</h3>
+                <span className={`transform transition-transform duration-300 text-primary font-bold text-2xl flex items-center justify-center ${isOpen ? "rotate-180" : ""}`}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </span>
             </button>
             <div
@@ -67,7 +67,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
                     }`}
             >
                 <div className="overflow-hidden">
-                    <div className="text-gray-600 text-lg whitespace-pre-wrap leading-relaxed">
+                    <div className="text-gray-400 text-lg whitespace-pre-wrap leading-relaxed">
                         {answer.split('\n\n').map((block, i) => (
                             <p key={i} className="mb-4 last:mb-0">
                                 {block.split('**').map((part, j) =>

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #0B0B0F;
   --foreground: #333333;
   /* Brand Colors */
   --primary-yellow: #ffb950;
@@ -11,7 +11,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-dm-sans);
+  --font-sans: var(--font-bricolage);
   
   /* Mapping Brand Colors for Tailwind v4 classes */
   --color-primary: var(--primary-yellow);
@@ -21,7 +21,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-dm-sans), sans-serif;
+  font-family: var(--font-bricolage), sans-serif;
 }
 
 /* Custom Utilities */

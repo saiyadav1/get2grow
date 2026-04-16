@@ -5,22 +5,17 @@ import StatsChips from "./StatsChips";
 
 export default function Hero() {
     return (
-        <section className="relative pt-[160px] pb-[80px] bg-white text-center px-4 overflow-hidden">
-            {/* Full Background SVG Layer */}
-            <div 
-                className="absolute inset-0 z-0 pointer-events-none"
-                style={{ 
-                    backgroundImage: `url('/assets/hero_bg_grid_line.svg')`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat'
-                }}
-            />
-
+        <section className="relative pt-[160px] pb-[80px] text-center px-4 overflow-hidden" style={{
+            backgroundImage: `
+                repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, transparent 1px, transparent 80px),
+                repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, transparent 1px, transparent 80px)
+            `,
+            backgroundSize: '80px 80px'
+        }}>
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="max-w-6xl mx-auto flex flex-col items-center">
                     <div className="mb-6">
-                        <h1 className="text-[40px] md:text-[66px] leading-[1.1] font-bold text-[#333]">
+                        <h1 className="text-[40px] md:text-[66px] leading-[1.1] font-bold text-white">
                             We help <span className="text-highlight">entrepreneurs</span> build
                             profitable personal brands through{" "}
                             <span className="text-highlight">short-form content</span>

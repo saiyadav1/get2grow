@@ -62,7 +62,7 @@ export default function ServicesSection() {
     ];
 
     return (
-        <section id="services" className="py-24 bg-white overflow-hidden">
+        <section id="services" className="py-24 overflow-hidden">
             <div className="container mx-auto px-6 text-center mb-20">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -70,10 +70,10 @@ export default function ServicesSection() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-[40px] md:text-[60px] font-black text-brand-black uppercase tracking-tighter mb-6 leading-tight">
+                    <h2 className="text-[40px] md:text-[60px] font-black text-white uppercase tracking-tighter mb-6 leading-tight">
                         End-to-End Marketing <span className="text-primary">Solutions</span>
                     </h2>
-                    <p className="max-w-3xl mx-auto text-[18px] md:text-[20px] text-gray-500 font-medium">
+                    <p className="max-w-3xl mx-auto text-[18px] md:text-[20px] text-gray-300 font-medium">
                         From strategy to execution, we handle every aspect of your growth to ensure maximum ROI.
                     </p>
                 </motion.div>
@@ -89,7 +89,7 @@ export default function ServicesSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.5, delay: index % 3 * 0.1 }}
-                            className="group bg-white rounded-3xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500"
+                            className="group bg-black/40 rounded-3xl border border-white/5 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500"
                         >
                             <div className="relative h-64 w-full overflow-hidden">
                                 <Image
@@ -100,18 +100,18 @@ export default function ServicesSection() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             </div>
-                            
+
                             <div className="p-8">
-                                <h3 className="text-[26px] font-bold text-brand-black mb-4 group-hover:text-primary transition-colors">
+                                <h3 className="text-[26px] font-bold text-white mb-4 group-hover:text-primary transition-colors">
                                     {service.title}
                                 </h3>
-                                <p className="text-gray-500 mb-8 text-[16px] leading-relaxed font-medium">
+                                <p className="text-gray-400 mb-8 text-[16px] leading-relaxed font-medium">
                                     {service.description}
                                 </p>
-                                
-                                <ul className="space-y-3 border-t border-gray-50 pt-6">
+
+                                <ul className="space-y-3 border-t border-white/10 pt-6">
                                     {service.items.map((item, i) => (
-                                        <li key={i} className="flex items-center text-[14px] text-gray-600 font-semibold">
+                                        <li key={i} className="flex items-center text-[14px] text-gray-300 font-semibold">
                                             <div className="mr-3 h-1.5 w-1.5 rounded-full bg-primary" />
                                             {item}
                                         </li>

@@ -38,7 +38,7 @@
 //     return (
 //         <section id="section_testimonials" className="sm:py-20 bg-white relative clear-both">
 //             <div className="container mx-auto px-6 max-w-6xl">
-                
+
 //                 {/* Header */}
 //                 <div className="mb-16">
 //                     <span className="text-primary text-[10px] font-bold uppercase tracking-[0.4em] mb-3 block">
@@ -69,7 +69,7 @@
 //                         {testimonials.map((testimonial, index) => (
 //                             <SwiperSlide key={index}>
 //                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center py-4">
-                                    
+
 //                                     {/* Video Side */}
 //                                     <div className="relative">
 //                                         <div className="absolute -inset-2 bg-primary/5 rounded-[1.5rem] blur-xl" />
@@ -93,7 +93,7 @@
 //                                         <svg width="32" height="32" viewBox="0 0 44 34" fill="none" className="text-primary opacity-30 mb-6">
 //                                             <path d="M12.5 0C5.6 0 0 5.6 0 12.5V34H17.5V12.5H7.5C7.5 9.7 9.7 7.5 12.5 7.5V0ZM39 0C32.1 0 26.5 5.6 26.5 12.5V34H44V12.5H34C34 9.7 36.2 7.5 39 7.5V0Z" fill="currentColor"/>
 //                                         </svg>
-                                        
+
 //                                         <p className="text-brand-black text-[20px] md:text-[24px] leading-[1.4] font-medium tracking-tight mb-8">
 //                                             {testimonial.quote}
 //                                         </p>
@@ -121,7 +121,7 @@
 //                     {/* Navigation Bar */}
 //                     <div className="flex items-center justify-between mt-12 pt-8 border-t border-gray-100">
 //                         <div className="custom-pagination !static !w-auto flex gap-3"></div>
-                        
+
 //                         <div className="flex items-center gap-3">
 //                             <button className="custom-prev flex h-12 w-12 items-center justify-center rounded-full border border-brand-black/10 text-brand-black hover:bg-brand-black hover:text-white transition-all duration-300">
 //                                 <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
@@ -189,14 +189,17 @@ export default function TestimonialsSection() {
   ];
 
   if (!mounted) {
-    return <section className="py-20 bg-white min-h-[400px]" />;
+    return <section className="py-20 min-h-[400px]" />;
   }
 
   return (
     <section
       id="section_testimonials"
-      className="sm:py-20 bg-white relative clear-both"
+      className="sm:py-20 py-16 relative clear-both border-t border-white/5 overflow-hidden"
     >
+      {/* Subtle top gradient glow to separate sections */}
+      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[80%] max-w-[1000px] h-[300px] bg-primary/10 blur-[100px] rounded-[100%] pointer-events-none" />
+
       {/* ✅ Load Wistia ONCE for the whole section */}
       <Script
         src="https://fast.wistia.com/assets/external/E-v1.js"
@@ -209,7 +212,7 @@ export default function TestimonialsSection() {
           <span className="text-primary text-[10px] font-bold uppercase tracking-[0.4em] mb-3 block">
             Success Stories
           </span>
-          <h2 className="text-[38px] md:text-[56px] font-black text-brand-black leading-tight uppercase tracking-tighter">
+          <h2 className="text-[38px] md:text-[56px] font-black text-white leading-tight uppercase tracking-tighter">
             Exceptional <br /> <span className="text-primary">Results.</span>
           </h2>
         </div>
@@ -219,7 +222,7 @@ export default function TestimonialsSection() {
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={60}
             slidesPerView={1}
-            loop
+            loop={false}
             autoHeight
             navigation={{
               nextEl: ".custom-next",
@@ -234,12 +237,12 @@ export default function TestimonialsSection() {
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center py-4">
-                  
+
                   {/* ✅ VIDEO */}
                   <div className="relative">
                     <div className="absolute -inset-2 bg-primary/5 rounded-[1.5rem] blur-xl" />
-                    <div className="relative rounded-[1.5rem] bg-black shadow-2xl border border-gray-100 overflow-hidden aspect-video">
-                      
+                    <div className="relative rounded-[1.5rem] bg-black shadow-2xl border border-white/10 overflow-hidden aspect-video">
+
                       {/* OFFICIAL WISTIA EMBED */}
                       <div
                         className={`wistia_embed wistia_async_${testimonial.videoId} videoFoam=true w-full h-full`}
@@ -263,7 +266,7 @@ export default function TestimonialsSection() {
                       />
                     </svg>
 
-                    <p className="text-brand-black text-[20px] md:text-[24px] leading-[1.4] font-medium tracking-tight mb-8">
+                    <p className="text-white text-[20px] md:text-[24px] leading-[1.4] font-medium tracking-tight mb-8">
                       {testimonial.quote}
                     </p>
 
@@ -277,7 +280,7 @@ export default function TestimonialsSection() {
                         />
                       </div>
                       <div>
-                        <div className="font-bold text-lg text-brand-black uppercase tracking-tight">
+                        <div className="font-bold text-lg text-white uppercase tracking-tight">
                           {testimonial.name}
                         </div>
                         <div className="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">
@@ -293,14 +296,14 @@ export default function TestimonialsSection() {
           </Swiper>
 
           {/* NAVIGATION */}
-          <div className="flex items-center justify-between mt-12 pt-8 border-t border-gray-100">
+          <div className="flex items-center justify-between mt-12 pt-8 border-t border-white/10">
             <div className="custom-pagination !static !w-auto flex gap-3" />
 
             <div className="flex items-center gap-3">
-              <button className="custom-prev flex h-12 w-12 items-center justify-center rounded-full border border-brand-black/10 text-brand-black hover:bg-brand-black hover:text-white transition-all duration-300">
+              <button className="custom-prev flex h-12 w-12 items-center justify-center rounded-full bg-primary text-brand-black hover:bg-primary/80 transition-all duration-300">
                 ‹
               </button>
-              <button className="custom-next flex h-12 w-12 items-center justify-center rounded-full border border-brand-black/10 text-brand-black hover:bg-brand-black hover:text-white transition-all duration-300">
+              <button className="custom-next flex h-12 w-12 items-center justify-center rounded-full bg-primary text-brand-black hover:bg-primary/80 transition-all duration-300">
                 ›
               </button>
             </div>

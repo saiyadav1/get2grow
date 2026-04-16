@@ -6,9 +6,9 @@ export default function LogoMarquee() {
     const logos = Array(8).fill("/assets/studio_logo.avif");
 
     return (
-        <section className="py-20 bg-white overflow-hidden">
+        <section className="py-20 overflow-hidden">
             <div className="container mx-auto px-4 mb-12 text-center">
-                <h2 className="text-[20px] font-medium text-gray-900">
+                <h2 className="text-[20px] font-medium text-white">
                     Trusted by the industry leaders
                 </h2>
             </div>
