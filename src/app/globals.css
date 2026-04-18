@@ -12,7 +12,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-bricolage);
-  
+
   /* Mapping Brand Colors for Tailwind v4 classes */
   --color-primary: var(--primary-yellow);
   --color-brand-black: var(--brand-black);
@@ -33,12 +33,50 @@ body {
 
 /* Infinite Scroll Animation for Logo Sliders/Testimonials */
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-scroll {
   animation: scroll 30s linear infinite;
   display: flex;
   width: max-content;
+}
+
+/* Infinite Vertical Scroll Animations */
+@keyframes scrollVertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes scrollVerticalReverse {
+  0% {
+    transform: translateY(-50%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-scroll-vertical {
+  animation: scrollVertical 6s linear infinite;
+  display: flex;
+  flex-direction: column;
+}
+
+.animate-scroll-vertical-reverse {
+  animation: scrollVerticalReverse 6s linear infinite;
+  display: flex;
+  flex-direction: column;
 }

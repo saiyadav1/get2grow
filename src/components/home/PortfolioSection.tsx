@@ -34,13 +34,13 @@ export default function PortfolioSection() {
 
   return (
     <section className="py-20  overflow-hidden text-white relative"
-      style={{
-        backgroundImage: `
-                repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, transparent 1px, transparent 80px),
-                repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, transparent 1px, transparent 80px)
-            `,
-        backgroundSize: '80px 80px'
-      }}
+    // style={{
+    //   backgroundImage: `
+    //           repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, transparent 1px, transparent 80px),
+    //           repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, transparent 1px, transparent 80px)
+    //       `,
+    //   backgroundSize: '80px 80px'
+    // }}
     >
       {/* ✅ Load Wistia ONCE */}
       <Script

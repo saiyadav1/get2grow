@@ -1,45 +1,135 @@
 "use client";
 
 import Link from "next/link";
-import StatsChips from "./StatsChips";
 
 export default function Hero() {
+    const profiles = [
+        { name: "Liah", followers: "247K+ Followers", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400&h=500" },
+        { name: "Daniel Del Carmen", followers: "25K+ Followers", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=400&h=500" },
+        { name: "Sarah Jenkins", followers: "120K+ Followers", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400&h=500" },
+        { name: "Michael Chen", followers: "89K+ Followers", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=500" },
+        { name: "Elena Rodriguez", followers: "450K+ Followers", image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=400&h=500" },
+        { name: "Marcus Johnson", followers: "75K+ Followers", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400&h=500" },
+    ];
+
     return (
-        <section className="relative pt-[160px] pb-[80px] text-center px-4 overflow-hidden" style={{
-            backgroundImage: `
-                repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, transparent 1px, transparent 80px),
-                repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, transparent 1px, transparent 80px)
-            `,
-            backgroundSize: '80px 80px'
-        }}>
-            <div className="max-w-7xl mx-auto relative z-10">
-                <div className="max-w-6xl mx-auto flex flex-col items-center">
-                    <div className="mb-6">
-                        <h1 className="text-[40px] md:text-[66px] leading-[1.1] font-bold text-white">
-                            We help <span className="text-highlight">entrepreneurs</span> build
-                            profitable personal brands through{" "}
-                            <span className="text-highlight">short-form content</span>
+        <section className="relative pt-[10px] pb-[10px] px-4 overflow-hidden min-h-[100vh]">
+            {/* Grid Background with edge fade */}
+            <div className="absolute inset-0 pointer-events-none" style={{
+                backgroundImage: `
+                    repeating-linear-gradient(0deg, rgba(255,255,255,0.06) 0px, transparent 1px, transparent 60px),
+                    repeating-linear-gradient(90deg, rgba(255,255,255,0.06) 0px, transparent 1px, transparent 60px)
+                `,
+                backgroundSize: '60px 60px',
+                maskImage: 'radial-gradient(ellipse at center, black 20%, transparent 80%)',
+                WebkitMaskImage: 'radial-gradient(ellipse at center, black 20%, transparent 80%)'
+            }}></div>
+            <div className="max-w-[1440px] mx-auto relative z-10 flex flex-col lg:flex-row items-center gap-8 lg:gap-8 px-4 lg:px-8">
+                {/* Left Content */}
+                <div className="flex-1 text-left flex flex-col justify-center pr-0">
+                    <div className="mb-8 md:mb-10">
+                        <h1 className="text-[32px] sm:text-[36px] md:text-[52px] leading-[1.15] font-bold text-white tracking-tight">
+                            Helping{" "}
+                            <span className="relative inline-block">
+                                Entrepreneurs
+                                {/* Decorative sparks */}
+                                <div className="absolute -right-8 -top-6 md:-right-10 md:-top-8 hidden sm:block select-none pointer-events-none">
+                                    <svg width="35" height="35" viewBox="0 0 100 100" className="stroke-[#E0F2FE] fill-none transform rotate-12 md:w-[45px] md:h-[45px]" style={{ strokeWidth: 5, strokeLinecap: "round" }}>
+                                        <path d="M 25 80 Q 20 50 25 20 M 50 85 Q 50 50 60 15 M 75 80 Q 80 50 95 30" />
+                                    </svg>
+                                </div>
+                            </span>
+                            <br />build organic brands as<br />
+                            <span className="text-highlight">niche authorities</span>
                         </h1>
                     </div>
 
-                    <p className="max-w-3xl mx-auto text-[18px] md:text-[20px] text-gray-600 mb-2">
-                        End-to-end direct response marketing that turns prospects into customers.
-                    </p>
-                    <p className="max-w-3xl mx-auto text-[18px] md:text-[20px] text-gray-600 mb-8">
-                        We deliver measurable ROI through data-driven campaigns that scale your business.
+                    <p className="max-w-lg text-[14px] md:text-[18px] text-gray-400 mb-8 md:mb-12 leading-relaxed font-light">
+                        Scaling brands for niche authorities with world class organic content.
+                        Currently working with personal brands, funded startups, Crypto/trading ventures and much more.
                     </p>
 
-                    <div className="mb-16">
+                    <div className="relative inline-block mb-10 w-fit">
                         <Link
                             href="https://cal.com/metro-media-house/discovery"
                             target="_blank"
-                            className="inline-block px-8 py-4 bg-primary text-white text-[18px] font-medium rounded hover:bg-[#2d7bc2] transition-colors"
+                            className="inline-block px-5 py-3 md:px-7 md:py-3.5 bg-primary text-[#121212] text-[15px] md:text-[16px] font-bold rounded-lg hover:bg-[#e0a340] transition-colors shadow-[0_0_20px_rgba(255,185,80,0.25)]"
                         >
-                            Book a Free Discovery Call
+                            Book a Discovery Call
                         </Link>
-                    </div>
 
-                    <StatsChips />
+                        {/* Free text with arrow */}
+                        <div className="absolute -right-16 -bottom-6 md:-right-28 md:-bottom-6 transform -rotate-12 flex-col items-center pointer-events-none hidden sm:flex">
+                            <span className="text-[#a4d4b4] text-xl md:text-2xl -mb-3 ml-4" style={{ fontFamily: "'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive" }}>It's Free</span>
+                            <svg width="45" height="45" viewBox="0 0 100 100" className="stroke-[#a4d4b4] fill-none md:w-[60px] md:h-[60px]" style={{ strokeWidth: 2, strokeLinecap: "round" }}>
+                                <path d="M 70 30 Q 80 80 30 50 M 40 40 L 25 50 L 35 60" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Right Content - Carousel */}
+                <div className="flex-1 w-full lg:w-auto h-[50vh] md:h-[620px] max-h-[50vh] md:max-h-none overflow-hidden relative mt-6 md:mt-8 lg:mt-0">
+                    {/* Gradient masks for smooth fade at top and bottom */}
+                    <div className="absolute inset-0 pointer-events-none z-10" style={{
+                        background: 'linear-gradient(to bottom, var(--background) 0%, transparent 18%, transparent 82%, var(--background) 100%)'
+                    }}></div>
+
+                    <div className="flex gap-3 md:gap-5 h-full relative justify-center md:justify-end pr-0 md:pr-4">
+                        {/* Column 1 */}
+                        <div className="flex flex-col gap-3 md:gap-5 animate-scroll-vertical w-[45%] sm:w-[48%] md:w-[300px] xl:w-[400px]" style={{ animationDelay: '-8s' }}>
+                            {[...profiles, ...profiles].map((profile, i) => (
+                                <div
+                                    key={`col1-${i}`}
+                                    className={`relative rounded-2xl md:rounded-3xl overflow-hidden shrink-0 border border-white/5 bg-[#1a1a24] group ${i % 2 === 0
+                                        ? 'h-[200px] md:h-[480px] xl:h-[450px]'
+                                        : 'h-[150px] md:h-[480px] xl:h-[450px]'
+                                        }`}
+                                >
+                                    <img src={profile.image} alt={profile.name} className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                                    <div className="absolute bottom-0 left-0 right-0 p-2 md:p-5">
+                                        <div className="flex items-center gap-1 md:gap-2 mb-0.5 relative z-10">
+                                            <div className="w-4 h-4 md:w-5 md:h-5 shrink-0 rounded-[4px] md:rounded-[6px] bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] flex items-center justify-center p-[2px] md:p-[3px]">
+                                                <div className="w-full h-full border-white border-[1px] md:border-[1.5px] rounded-[3px] md:rounded-[5px] relative">
+                                                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-1 md:w-1.5 md:h-1.5 border-white border-[1px] md:border-[1.5px] rounded-full"></div>
+                                                </div>
+                                            </div>
+                                            <p className="text-white font-semibold text-[11px] md:text-[15px] truncate drop-shadow-md">{profile.name}</p>
+                                        </div>
+                                        <p className="text-gray-300 text-[10px] md:text-[13px] font-medium">{profile.followers}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Column 2 — offset downward for masonry stagger */}
+                        <div className="flex flex-col gap-3 md:gap-5 animate-scroll-vertical-reverse w-[45%] sm:w-[48%] md:w-[300px] xl:w-[400px] mt-10 md:mt-16" style={{ animationDelay: '-14s' }}>
+                            {[...profiles].reverse().concat([...profiles].reverse()).map((profile, i) => (
+                                <div
+                                    key={`col2-${i}`}
+                                    className={`relative rounded-2xl md:rounded-3xl overflow-hidden shrink-0 border border-white/5 bg-[#1a1a24] group ${i % 2 === 0
+                                        ? 'h-[150px] md:h-[480px] xl:h-[450px]'
+                                        : 'h-[200px] md:h-[480px] xl:h-[450px]'
+                                        }`}
+                                >
+                                    <img src={profile.image} alt={profile.name} className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                                    <div className="absolute bottom-0 left-0 right-0 p-2 md:p-5">
+                                        <div className="flex items-center gap-1 md:gap-2 mb-0.5 relative z-10">
+                                            <div className="w-4 h-4 md:w-5 md:h-5 shrink-0 rounded-[4px] md:rounded-[6px] bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] flex items-center justify-center p-[2px] md:p-[3px]">
+                                                <div className="w-full h-full border-white border-[1px] md:border-[1.5px] rounded-[3px] md:rounded-[5px] relative">
+                                                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-1 md:w-1.5 md:h-1.5 border-white border-[1px] md:border-[1.5px] rounded-full"></div>
+                                                </div>
+                                            </div>
+                                            <p className="text-white font-semibold text-[11px] md:text-[15px] truncate drop-shadow-md">{profile.name}</p>
+                                        </div>
+                                        <p className="text-gray-300 text-[10px] md:text-[13px] font-medium">{profile.followers}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
