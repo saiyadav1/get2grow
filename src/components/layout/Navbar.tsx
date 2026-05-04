@@ -14,8 +14,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav 
-      className={`w-full py-4 transition-all duration-300 font-sans `}>
+    <nav className="w-full py-4 transition-all duration-300 font-sans sticky top-0 z-[100] bg-black/50 backdrop-blur-xl border-b border-white/5">
       <div className="container mx-auto px-6 lg:px-12 flex items-center justify-between">
         {/* Brand Identity */}
         <Link href="/" className="group flex items-center gap-3">
@@ -49,7 +48,7 @@ export default function Navbar() {
           </ul>
           <Link
             href="#contact-section"
-            className="px-8 py-3 bg-primary text-white text-[11px] font-bold uppercase tracking-widest rounded-full shadow-lg hover:bg-[#2d7bc2] hover:text-white transition-all duration-300 inline-block"
+            className="px-8 py-3 bg-primary text-brand-black text-[11px] font-bold uppercase tracking-widest rounded-full shadow-[0_0_20px_rgba(34,197,94,0.2)] hover:bg-white hover:text-black hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] hover:-translate-y-0.5 transition-all duration-300 inline-block"
           >
             Book a Call
           </Link>
@@ -89,7 +88,7 @@ export default function Navbar() {
           <li className="pt-6">
             <Link
               href="#contact-section"
-              className="block w-full text-center py-5 bg-[#39FF14] text-white font-bold uppercase tracking-widest rounded-2xl shadow-lg"
+              className="block w-full text-center py-5 bg-primary text-brand-black font-bold uppercase tracking-widest rounded-2xl shadow-[0_0_20px_rgba(34,197,94,0.2)] hover:bg-white hover:text-black transition-all duration-300"
               onClick={() => setIsOpen(false)}
             >
               Book a Call

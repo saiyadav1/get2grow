@@ -4,8 +4,8 @@
   --background: #0B0B0F;
   --foreground: #333333;
   /* Brand Colors */
-  --primary-yellow: #ffb950;
   --brand-black: #121212;
+  --primary-green: #22c55e;
 }
 
 @theme inline {
@@ -14,7 +14,7 @@
   --font-sans: var(--font-bricolage);
 
   /* Mapping Brand Colors for Tailwind v4 classes */
-  --color-primary: var(--primary-yellow);
+  --color-primary: var(--primary-green);
   --color-brand-black: var(--brand-black);
 }
 
@@ -27,7 +27,7 @@ body {
 /* Custom Utilities */
 @layer utilities {
   .text-highlight {
-    color: var(--primary-yellow);
+    color: var(--primary-green);
   }
 }
 

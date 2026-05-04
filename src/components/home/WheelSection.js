@@ -57,10 +57,10 @@ export default function WheelSection() {
                 <div className="max-w-[700px] md:ml-10">
                     <h2 className="text-[36px] md:text-[56px] font-bold text-white tracking-tight leading-[1.1]">
                         High Level{' '}
-                        <span className="text-[#fbb74d] relative inline-block">
+                        <span className="text-primary relative inline-block">
                             Repurposing
                             {/* Hand-drawn Green arcs */}
-                            <svg className="absolute -top-3 -right-6 w-12 h-12 text-[#b9f0a0] opacity-90 hidden md:block" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+                            <svg className="absolute -top-3 -right-6 w-12 h-12 text-primary opacity-90 hidden md:block" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
                                 <path d="M10 90 Q 20 60 50 10" />
                                 <path d="M40 90 Q 60 60 80 20" />
                                 <path d="M80 80 Q 90 60 95 30" />
@@ -208,7 +208,7 @@ export default function WheelSection() {
                             href="https://cal.com/metro-media-house/discovery"
                             target="_blank"
                             style={{ opacity: btnOpacity, y: btnY }}
-                            className="px-6 py-3 md:px-8 md:py-4 bg-[#fbb74d] text-brand-black text-[15px] md:text-[18px] font-bold rounded-lg shadow-[0_0_30px_rgba(251,183,77,0.3)] hover:scale-105 transition-transform"
+                            className="px-6 py-3 md:px-8 md:py-4 bg-primary text-brand-black text-[15px] md:text-[18px] font-bold rounded-lg shadow-[0_0_30px_rgba(34,197,94,0.3)] hover:bg-white hover:text-black hover:scale-105 transition-all"
                         >
                             Book a Discovery Call
                         </motion.a>

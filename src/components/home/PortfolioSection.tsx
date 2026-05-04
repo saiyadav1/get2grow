@@ -91,7 +91,7 @@ export default function PortfolioSection() {
           {videoIds.map((id) => (
             <SwiperSlide key={id}>
               <div className="max-w-[200px] md:max-w-[260px] mx-auto">
-                <div className="relative rounded-[2rem] overflow-hidden bg-black aspect-[9/16] shadow-[0_0_50px_rgba(238,157,43,0.1)] border border-white/5 transition-all">
+                <div className="relative rounded-[2rem] overflow-hidden bg-black aspect-[9/16] shadow-[0_0_50px_rgba(34,197,94,0.1)] border border-white/5 transition-all">
 
                   {/* ✅ Render embed ONLY when Wistia is ready */}
                   {wistiaReady && (
@@ -131,7 +131,7 @@ export default function PortfolioSection() {
           transition: all 0.4s ease;
         }
         .portfolio-pagination .swiper-pagination-bullet-active {
-          background: #ee9d2b;
+          background: var(--primary-green);
           width: 28px;
           border-radius: 4px;
         }

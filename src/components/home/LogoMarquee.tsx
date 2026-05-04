@@ -9,12 +9,12 @@ export default function LogoMarquee() {
             <div className="container mx-auto px-16 mb-10 md:mb-14 text-center flex relative z-10">
                 <h2 className="relative text-[24px] sm:text-[32px] md:text-[44px] font-bold text-white flex flex-wrap items-center justify-center gap-x-2 md:gap-x-3 tracking-tight">
                     <span>Trusted by</span>
-                    <span className="relative text-[#fbb74d] drop-shadow-lg">
+                    <span className="relative text-primary drop-shadow-lg">
                         Industry Leaders
 
                         {/* Sparkle SVG - positioned specifically for desktop */}
                         <svg
-                            className="hidden md:block absolute -top-5 -right-10 w-[42px] h-[42px] text-[#b9f0a0]"
+                            className="hidden md:block absolute -top-5 -right-10 w-[42px] h-[42px] text-primary"
                             viewBox="0 0 40 40"
                             fill="none"
                             stroke="currentColor"

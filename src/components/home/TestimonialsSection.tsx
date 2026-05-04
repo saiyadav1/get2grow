@@ -144,7 +144,7 @@
 //                     transition: all 0.5s ease;
 //                 }
 //                 .custom-pagination .swiper-pagination-bullet-active {
-//                     background: var(--primary-yellow) !important;
+//                     background: var(--primary-green) !important;
 //                     width: 50px;
 //                 }
 //             `}</style>
@@ -321,7 +321,7 @@ export default function TestimonialsSection() {
           transition: all 0.5s ease;
         }
         .custom-pagination .swiper-pagination-bullet-active {
-          background: var(--primary-yellow);
+          background: var(--primary-green);
           width: 50px;
         }
       `}</style>

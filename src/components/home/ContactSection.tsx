@@ -54,7 +54,7 @@ export default function ContactSection() {
 
                         <div className="space-y-6">
                             <div className="flex items-start gap-4">
-                                <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-[#ee9d2b] flex-shrink-0">
+                                <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-primary flex-shrink-0">
                                     <FaMapMarkerAlt size={20} />
                                 </div>
                                 <div>
@@ -64,7 +64,7 @@ export default function ContactSection() {
                             </div>
 
                             <div className="flex items-start gap-4">
-                                <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-[#ee9d2b] flex-shrink-0">
+                                <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-primary flex-shrink-0">
                                     <FaPhoneAlt size={20} />
                                 </div>
                                 <div>
@@ -74,7 +74,7 @@ export default function ContactSection() {
                             </div>
 
                             <div className="flex items-start gap-4">
-                                <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-[#ee9d2b] flex-shrink-0">
+                                <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-primary flex-shrink-0">
                                     <FaEnvelope size={20} />
                                 </div>
                                 <div>

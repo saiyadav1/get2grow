@@ -26,7 +26,7 @@ export default function StatsChips() {
                 <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-8">
                     {/* Stat 1 — Views */}
                     <div className="flex flex-col items-center md:items-start gap-4 flex-1 text-center md:text-left">
-                        <DecagramBadge color="#bcf5ad">
+                        <DecagramBadge color="#22c55e">
                             {/* Eye icon */}
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 4.5C7 4.5 2.73 7.61 1 12C2.73 16.39 7 19.5 12 19.5C17 19.5 21.27 16.39 23 12C21.27 7.61 17 4.5 12 4.5ZM12 17A5 5 0 1 1 12 7A5 5 0 0 1 12 17ZM12 9A3 3 0 1 0 12 15A3 3 0 0 0 12 9Z" />
@@ -57,7 +57,7 @@ export default function StatsChips() {
 
                     {/* Stat 3 — Videos */}
                     <div className="flex flex-col items-center md:items-start gap-4 flex-1 text-center md:text-left">
-                        <DecagramBadge color="#fbf386">
+                        <DecagramBadge color="#22c55e">
                             {/* Video camera icon */}
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M17 10.5V7A1 1 0 0 0 16 6H4A1 1 0 0 0 3 7V17A1 1 0 0 0 4 18H16A1 1 0 0 0 17 17V13.5L21 17.5V6.5L17 10.5Z" />

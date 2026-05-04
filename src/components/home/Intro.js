@@ -50,7 +50,7 @@ export default function Intro() {
                             </div>
 
                             {/* Hand-drawn Loop Arrow */}
-                            <svg className="absolute -top-16 -left-32 w-32 h-32 text-[#b9f0a0] opacity-80" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1.5">
+                            <svg className="absolute -top-16 -left-32 w-32 h-32 text-primary opacity-80" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1.5">
                                 <path d="M10 90 C 20 60, 40 20, 60 40 C 80 60, 50 60, 60 90" strokeLinecap="round" />
                                 <path d="M50 85 L60 90 L65 80" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
@@ -59,7 +59,7 @@ export default function Intro() {
                         {/* Card Content */}
                         <div className="bg-[#111116] border border-white/[0.06] rounded-2xl p-8 lg:p-10 shadow-2xl lg:-rotate-[6deg] transition-transform duration-500 hover:rotate-0 hover:z-20 h-full flex flex-col justify-between relative z-10">
                             <p className="text-gray-100 text-[16px] md:text-[18px] lg:text-[20px] leading-[1.65] lg:leading-[1.7]">
-                                Metro Media House helped me grow to <span className="text-[#fbb74d] font-semibold">50K in just 2 months</span> with constant support, strategy, and dedication. Their consistency made all the difference
+                                Metro Media House helped me grow to <span className="text-primary font-semibold">50K in just 2 months</span> with constant support, strategy, and dedication. Their consistency made all the difference
                             </p>
                             <div className="mt-10 md:mt-12">
                                 <p className="text-white font-bold text-[15px]">Zeel Mehta Jain</p>
@@ -86,7 +86,7 @@ export default function Intro() {
                         {/* Floating Decorations */}
                         <div className="hidden lg:block absolute -top-20 left-[25%] transition-transform duration-500 group-hover:-translate-y-2 z-0">
                             {/* Green Circle Badge */}
-                            <div className="relative w-[50px] h-[50px] bg-[#bcf5ad] rounded-full flex items-center justify-center z-10">
+                            <div className="relative w-[50px] h-[50px] bg-primary rounded-full flex items-center justify-center z-10">
                                 {/* Smiley face */}
                                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                     <circle cx="12" cy="12" r="10" />
@@ -97,7 +97,7 @@ export default function Intro() {
                             </div>
 
                             {/* Hand-drawn Loop Arrow */}
-                            <svg className="absolute -top-16 -right-24 w-28 h-28 text-[#b9f0a0] opacity-80" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1.5">
+                            <svg className="absolute -top-16 -right-24 w-28 h-28 text-primary opacity-80" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1.5">
                                 <path d="M80 20 C 50 5, 30 30, 60 50 C 90 70, 70 80, 50 60" strokeLinecap="round" />
                                 <path d="M60 55 L50 60 L45 50" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
@@ -106,7 +106,7 @@ export default function Intro() {
                         {/* Card Content */}
                         <div className="bg-[#111116] border border-white/[0.06] rounded-2xl p-8 lg:p-10 shadow-2xl lg:rotate-[6deg] transition-transform duration-500 hover:rotate-0 hover:z-20 h-full flex flex-col justify-between relative z-10">
                             <p className="text-gray-100 text-[16px] md:text-[18px] lg:text-[20px] leading-[1.65] lg:leading-[1.7]">
-                                Very receptive to feedback, quick to adapt, and genuinely collaborative. <span className="text-[#fbb74d] font-semibold">Their editing always captures the tone and story we're trying to tell, and they deliver with care and attention to detail.</span>
+                                Very receptive to feedback, quick to adapt, and genuinely collaborative. <span className="text-primary font-semibold">Their editing always captures the tone and story we're trying to tell, and they deliver with care and attention to detail.</span>
                             </p>
                             <div className="mt-10 md:mt-12">
                                 <p className="text-white font-bold text-[15px]">Liah Yoo</p>

@@ -53,7 +53,7 @@ export default function Hero() {
                         <Link
                             href="https://cal.com/metro-media-house/discovery"
                             target="_blank"
-                            className="inline-block px-5 py-3 md:px-7 md:py-3.5 bg-primary text-[#121212] text-[15px] md:text-[16px] font-bold rounded-lg hover:bg-[#e0a340] transition-colors shadow-[0_0_20px_rgba(255,185,80,0.25)]"
+                            className="inline-block px-5 py-3 md:px-7 md:py-3.5 bg-primary text-[#121212] text-[15px] md:text-[16px] font-bold rounded-lg hover:bg-white transition-colors shadow-[0_0_20px_rgba(34,197,94,0.25)]"
                         >
                             Book a Discovery Call
                         </Link>

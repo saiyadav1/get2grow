@@ -12,6 +12,8 @@ import Footer from "@/components/layout/Footer";
 import StatsChips from "@/components/home/StatsChips";
 import Intro from "@/components/home/Intro";
 import PortfolioSection from "@/components/home/PortfolioSection";
+import Services from "@/components/services/Services";
+
 export default function Home() {
   return (
     <main className="min-h-screen ">
@@ -21,7 +23,8 @@ export default function Home() {
       <LogoMarquee />
       <Intro />
       <PortfolioSection />
-      <WheelSection />
+      <Services />
+      {/* <WheelSection /> */}
       {/* <ServicesSection /> */}
       <AboutSection />
       {/* <LetterSection /> */}
