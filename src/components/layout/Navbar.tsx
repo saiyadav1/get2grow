@@ -47,7 +47,7 @@ export default function Navbar() {
             ))}
           </ul>
           <Link
-            href="#contact-section"
+            href="/contact-form"
             className="px-8 py-3 bg-primary text-brand-black text-[11px] font-bold uppercase tracking-widest rounded-full shadow-[0_0_20px_rgba(34,197,94,0.2)] hover:bg-white hover:text-black hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] hover:-translate-y-0.5 transition-all duration-300 inline-block"
           >
             Book a Call
@@ -87,7 +87,7 @@ export default function Navbar() {
           ))}
           <li className="pt-6">
             <Link
-              href="#contact-section"
+              href="/contact-form"
               className="block w-full text-center py-5 bg-primary text-brand-black font-bold uppercase tracking-widest rounded-2xl shadow-[0_0_20px_rgba(34,197,94,0.2)] hover:bg-white hover:text-black transition-all duration-300"
               onClick={() => setIsOpen(false)}
             >

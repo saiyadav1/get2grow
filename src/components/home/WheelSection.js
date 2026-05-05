@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FaLinkedin, FaYoutube, FaInstagram, FaTiktok } from "react-icons/fa";
+import Link from "next/link";
 
 export default function WheelSection() {
     const containerRef = useRef(null);
@@ -203,16 +204,17 @@ export default function WheelSection() {
                     </div>
 
                     {/* Final Call to Action Button pinned inside the sticky window */}
-                    <div className="absolute bottom-[8vh] w-full flex justify-center z-20 pointer-events-auto mt-auto">
-                        <motion.a
-                            href="https://cal.com/metro-media-house/discovery"
-                            target="_blank"
-                            style={{ opacity: btnOpacity, y: btnY }}
-                            className="px-6 py-3 md:px-8 md:py-4 bg-primary text-brand-black text-[15px] md:text-[18px] font-bold rounded-lg shadow-[0_0_30px_rgba(34,197,94,0.3)] hover:bg-white hover:text-black hover:scale-105 transition-all"
+                    <motion.div 
+                        className="absolute bottom-[8vh] w-full flex justify-center z-20 pointer-events-auto mt-auto"
+                        style={{ opacity: btnOpacity, y: btnY }}
+                    >
+                        <Link
+                            href="/contact-form"
+                            className="px-6 py-3 md:px-8 md:py-4 bg-primary text-brand-black text-[15px] md:text-[18px] font-bold rounded-lg shadow-[0_0_30px_rgba(34,197,94,0.3)] hover:bg-white hover:text-black hover:scale-105 transition-all block"
                         >
                             Book a Discovery Call
-                        </motion.a>
-                    </div>
+                        </Link>
+                    </motion.div>
 
                 </div>
             </div>

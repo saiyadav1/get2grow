@@ -3,6 +3,7 @@
 import { useRef, useState } from 'react';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence, useSpring, useTransform } from 'framer-motion';
 import { MonitorSmartphone, Share2, Megaphone, Video, FileText, BarChart3 } from 'lucide-react';
+import Link from 'next/link';
 
 const servicesData = [
     {
@@ -275,16 +276,19 @@ export default function Services() {
                                         ))}
                                     </motion.ul>
                                     <motion.div variants={childVariants} className="inline-block">
-                                        <motion.button
-                                            whileHover={{ scale: 1.05 }}
-                                            whileTap={{ scale: 0.95 }}
-                                            animate={{ boxShadow: ['0px 0px 0px rgba(34, 197, 94,0)', '0px 0px 20px rgba(34, 197, 94,0.4)', '0px 0px 0px rgba(34, 197, 94,0)'] }}
-                                            // We use object form transition to avoid type conflict with staggerChildren array
-                                            transition={{ repeat: Infinity, duration: 2.5 }}
-                                            className="px-8 py-4 bg-white text-black rounded-full font-medium"
-                                        >
-                                            Learn More
-                                        </motion.button>
+                                        <Link href="/contact-form" className="inline-block">
+                                            <motion.div
+                                                role="button"
+                                                whileHover={{ scale: 1.05 }}
+                                                whileTap={{ scale: 0.95 }}
+                                                animate={{ boxShadow: ['0px 0px 0px rgba(34, 197, 94,0)', '0px 0px 20px rgba(34, 197, 94,0.4)', '0px 0px 0px rgba(34, 197, 94,0)'] }}
+                                                // We use object form transition to avoid type conflict with staggerChildren array
+                                                transition={{ repeat: Infinity, duration: 2.5 }}
+                                                className="px-8 py-4 bg-white text-black rounded-full font-medium"
+                                            >
+                                                Learn More
+                                            </motion.div>
+                                        </Link>
                                     </motion.div>
                                 </motion.div>
                             </AnimatePresence>

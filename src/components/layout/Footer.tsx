@@ -8,7 +8,7 @@ export default function Footer() {
     return (
         <footer className="bg-brand-black text-white pt-24 pb-12">
             <div className="container mx-auto px-6 max-w-7xl">
-                
+
                 {/* Top Section: Branding & Big CTA */}
                 <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12 mb-20">
                     <div className="max-w-xl">
@@ -29,9 +29,9 @@ export default function Footer() {
                             Ready to turn your knowledge into <span className="text-primary">influence?</span>
                         </h2>
                     </div>
-                    
-                    <Link 
-                        href="#contact-section" 
+
+                    <Link
+                        href="/contact-form"
                         className="bg-primary text-brand-black font-bold uppercase tracking-widest px-10 py-5 rounded-full hover:bg-white transition-all duration-500 shadow-xl shadow-primary/10 active:scale-95"
                     >
                         Start Your Growth
@@ -42,7 +42,7 @@ export default function Footer() {
 
                 {/* Middle Section: Navigation & Contact */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
-                    
+
                     {/* Column 1: Explore */}
                     <div>
                         <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-8">Explore</h4>
@@ -58,7 +58,7 @@ export default function Footer() {
                         <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-8">Agency</h4>
                         <ul className="space-y-4 font-medium">
                             <li><Link href="#about" className="hover:text-primary transition-colors">About Us</Link></li>
-                            <li><Link href="#process" className="hover:text-primary transition-colors">Our Process</Link></li>
+                            {/* <li><Link href="#process" className="hover:text-primary transition-colors">Our Process</Link></li> */}
                             <li><Link href="#faq" className="hover:text-primary transition-colors">FAQ</Link></li>
                         </ul>
                     </div>
@@ -66,8 +66,8 @@ export default function Footer() {
                     {/* Column 3: Contact */}
                     <div className="col-span-2 md:col-span-1">
                         <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-8">Connect</h4>
-                        <a 
-                            href="mailto:get2grow@gmail.com" 
+                        <a
+                            href="mailto:get2grow@gmail.com"
                             className="text-xl md:text-2xl font-bold hover:text-primary transition-all break-words"
                         >
                             get2grow@gmail.com
@@ -83,8 +83,8 @@ export default function Footer() {
                                 { icon: <FaInstagram />, link: "https://www.instagram.com/whysaksham" },
                                 { icon: <FaLinkedin />, link: "#" }
                             ].map((social, i) => (
-                                <a 
-                                    key={i} 
+                                <a
+                                    key={i}
                                     href={social.link}
                                     className="w-12 h-12 rounded-xl border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-brand-black hover:border-primary transition-all duration-500"
                                 >
@@ -101,8 +101,8 @@ export default function Footer() {
                         © 2026 Get 2 Grow Agency. All rights reserved.
                     </div>
                     <div className="flex gap-8">
-                        <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-                        <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
+                        <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                        <Link href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link>
                     </div>
                 </div>
             </div>
