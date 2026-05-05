@@ -59,12 +59,12 @@ export default function Hero() {
                         </Link>
 
                         {/* Free text with arrow */}
-                        <div className="absolute -right-16 -bottom-6 md:-right-28 md:-bottom-6 transform -rotate-12 flex-col items-center pointer-events-none hidden sm:flex">
+                        {/* <div className="absolute -right-16 -bottom-6 md:-right-28 md:-bottom-6 transform -rotate-12 flex-col items-center pointer-events-none hidden sm:flex">
                             <span className="text-[#a4d4b4] text-xl md:text-2xl -mb-3 ml-4" style={{ fontFamily: "'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive" }}>It's Free</span>
                             <svg width="45" height="45" viewBox="0 0 100 100" className="stroke-[#a4d4b4] fill-none md:w-[60px] md:h-[60px]" style={{ strokeWidth: 2, strokeLinecap: "round" }}>
                                 <path d="M 70 30 Q 80 80 30 50 M 40 40 L 25 50 L 35 60" />
                             </svg>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 

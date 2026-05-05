@@ -1,54 +1,123 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Script from "next/script";
+import { useEffect, useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, EffectCoverflow } from "swiper/modules";
+import { Volume2, VolumeX } from "lucide-react";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 
+function VideoSlide({
+  src,
+  isActive,
+  isInView,
+  isMuted,
+  toggleMute,
+}: {
+  src: string;
+  isActive: boolean;
+  isInView: boolean;
+  isMuted: boolean;
+  toggleMute: (e: React.MouseEvent) => void;
+}) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (!videoRef.current) return;
+
+    // Explicitly enforce muted state to satisfy browser autoplay policies
+    videoRef.current.muted = isMuted;
+
+    if (isActive && isInView) {
+      // Adding a slight delay to ensure Swiper has finished rendering
+      const timer = setTimeout(() => {
+        videoRef.current?.play().catch((err) => console.log("Autoplay blocked:", err));
+      }, 100);
+      return () => clearTimeout(timer);
+    } else {
+      videoRef.current.pause();
+    }
+  }, [isActive, isInView, isMuted]);
+
+  return (
+    <div className="max-w-[200px] md:max-w-[260px] mx-auto relative group">
+      <div className="relative rounded-[2rem] overflow-hidden bg-black aspect-[9/16] shadow-[0_0_50px_rgba(34,197,94,0.1)] border border-white/5 transition-all">
+        <video
+          ref={videoRef}
+          src={src}
+          className="w-full h-full object-cover"
+          loop
+          muted={isMuted}
+          playsInline
+          controls={true}
+          preload="metadata"
+          autoPlay={isActive && isInView}
+        />
+        {/* Sound Toggle Button */}
+        <button
+          onClick={toggleMute}
+          className="absolute bottom-4 right-4 bg-black/50 hover:bg-black/80 text-white p-2 rounded-full backdrop-blur-sm transition-all z-10"
+          aria-label="Toggle sound"
+        >
+          {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export default function PortfolioSection() {
   const [mounted, setMounted] = useState(false);
-  const [wistiaReady, setWistiaReady] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
+  const [isInView, setIsInView] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  const videoIds = [
-    "7viozadrjl",
-    "v8k7at96mz",
-    "zx3jdjnoqt",
-    "5fw5ystba4",
-    "0uigfz3p31",
-    "i88px9e0ys",
-    "f6rr8qdv73",
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0, rootMargin: "100px" }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  const videos = [
+    "https://res.cloudinary.com/dtsasu4sq/video/upload/q_auto/f_auto/v1777911448/IMG_0435_ygem30.mp4",
+    "https://res.cloudinary.com/dtsasu4sq/video/upload/q_auto/f_auto/v1777913952/IMG_0369_lldq7v.mov",
+    "https://res.cloudinary.com/dtsasu4sq/video/upload/q_auto/f_auto/v1777911448/IMG_0435_ygem30.mp4",
+    "https://res.cloudinary.com/dtsasu4sq/video/upload/q_auto/f_auto/v1777913952/IMG_0369_lldq7v.mov",
+    "https://res.cloudinary.com/dtsasu4sq/video/upload/q_auto/f_auto/v1777911448/IMG_0435_ygem30.mp4",
+    "https://res.cloudinary.com/dtsasu4sq/video/upload/q_auto/f_auto/v1777913952/IMG_0369_lldq7v.mov"
   ];
+
+  const toggleMute = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setIsMuted((prev) => !prev);
+  };
 
   if (!mounted) {
     return <section className="min-h-screen " />;
   }
 
   return (
-    <section className="py-20  overflow-hidden text-white relative"
-    // style={{
-    //   backgroundImage: `
-    //           repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, transparent 1px, transparent 80px),
-    //           repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, transparent 1px, transparent 80px)
-    //       `,
-    //   backgroundSize: '80px 80px'
-    // }}
-    >
-      {/* ✅ Load Wistia ONCE */}
-      <Script
-        src="https://fast.wistia.com/assets/external/E-v1.js"
-        strategy="afterInteractive"
-        onLoad={() => setWistiaReady(true)}
-      />
-
+    <section ref={sectionRef} className="py-20 overflow-hidden text-white relative">
       <div className="container mx-auto px-6 max-w-6xl">
         {/* Header */}
         <div className="text-center mb-10">
@@ -65,7 +134,7 @@ export default function PortfolioSection() {
           modules={[Navigation, Pagination, EffectCoverflow]}
           effect="coverflow"
           centeredSlides
-          loop
+          loop={true}
           slidesPerView={1.2}
           coverflowEffect={{
             rotate: 0,
@@ -88,20 +157,17 @@ export default function PortfolioSection() {
           }}
           className="portfolio-swiper !pb-24"
         >
-          {videoIds.map((id) => (
-            <SwiperSlide key={id}>
-              <div className="max-w-[200px] md:max-w-[260px] mx-auto">
-                <div className="relative rounded-[2rem] overflow-hidden bg-black aspect-[9/16] shadow-[0_0_50px_rgba(34,197,94,0.1)] border border-white/5 transition-all">
-
-                  {/* ✅ Render embed ONLY when Wistia is ready */}
-                  {wistiaReady && (
-                    <div
-                      className={`wistia_embed wistia_async_${id} videoFoam=true w-full h-full`}
-                    />
-                  )}
-
-                </div>
-              </div>
+          {videos.map((src, index) => (
+            <SwiperSlide key={index}>
+              {({ isActive }) => (
+                <VideoSlide
+                  src={src}
+                  isActive={isActive}
+                  isInView={isInView}
+                  isMuted={isMuted}
+                  toggleMute={toggleMute}
+                />
+              )}
             </SwiperSlide>
           ))}
         </Swiper>
@@ -131,7 +197,7 @@ export default function PortfolioSection() {
           transition: all 0.4s ease;
         }
         .portfolio-pagination .swiper-pagination-bullet-active {
-          background: var(--primary-green);
+          background: var(--primary-green, #22c55e);
           width: 28px;
           border-radius: 4px;
         }
