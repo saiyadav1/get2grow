@@ -23,9 +23,9 @@ export default function StatsChips() {
     return (
         <section className="bg-transparent px-6 lg:px-12 pb-10 w-full">
             <div className="max-w-[1200px] mx-auto">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-8">
+                <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-8">
                     {/* Stat 1 — Views */}
-                    <div className="flex flex-col items-center md:items-start gap-4 flex-1 text-center md:text-left">
+                    <div className="flex flex-col items-center gap-4 flex-1 text-center">
                         <DecagramBadge color="#22c55e">
                             {/* Eye icon */}
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -33,14 +33,14 @@ export default function StatsChips() {
                             </svg>
                         </DecagramBadge>
                         <div>
-                            <p className="text-white font-semibold text-[17px] sm:text-[18px] md:text-[20px] leading-[1.3]">
-                                500M+ views<br className="hidden md:block" /> generated
+                            <p className="text-white font-semibold text-[17px] sm:text-[18px] md:text-[20px] leading-[1.3] max-w-[250px] mx-auto">
+                                27+ Brands<br className="hidden md:block" /> Worked With
                             </p>
                         </div>
                     </div>
 
                     {/* Stat 2 — Years */}
-                    <div className="flex flex-col items-center md:items-start gap-4 flex-1 text-center md:text-left">
+                    <div className="flex flex-col items-center gap-4 flex-1 text-center">
                         <DecagramBadge color="#b2b5f5">
                             {/* Verified Star icon */}
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -49,14 +49,14 @@ export default function StatsChips() {
                             </svg>
                         </DecagramBadge>
                         <div>
-                            <p className="text-white font-semibold text-[17px] sm:text-[18px] md:text-[20px] leading-[1.3]">
-                                3 Years of Building<br className="hidden md:block" /> Brands
+                            <p className="text-white font-semibold text-[17px] sm:text-[18px] md:text-[20px] leading-[1.3] max-w-[250px] mx-auto">
+                                262% Conversion<br className="hidden md:block" /> Growth
                             </p>
                         </div>
                     </div>
 
                     {/* Stat 3 — Videos */}
-                    <div className="flex flex-col items-center md:items-start gap-4 flex-1 text-center md:text-left">
+                    <div className="flex flex-col items-center gap-4 flex-1 text-center">
                         <DecagramBadge color="#22c55e">
                             {/* Video camera icon */}
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -64,8 +64,8 @@ export default function StatsChips() {
                             </svg>
                         </DecagramBadge>
                         <div>
-                            <p className="text-white font-semibold text-[17px] sm:text-[18px] md:text-[20px] leading-[1.3]">
-                                6000+ Videos Created
+                            <p className="text-white font-semibold text-[17px] sm:text-[18px] md:text-[20px] leading-[1.3] max-w-[250px] mx-auto">
+                                184% Increment in<br className="hidden md:block" /> Engagement
                             </p>
                         </div>
                     </div>
