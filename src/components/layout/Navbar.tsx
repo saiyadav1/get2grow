@@ -69,8 +69,8 @@ export default function Navbar() {
 
       {/* --- MOBILE MENU OVERLAY FIX --- */}
       <div 
-        className={`lg:hidden fixed inset-0 top-[70px] h-[calc(100vh-70px)] bg-black z-[105] transition-all duration-500 ease-in-out px-8 py-12 border-t border-gray-100 ${
-          isOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+        className={`lg:hidden fixed inset-0 top-[70px] h-[calc(100vh-70px)] bg-black z-[105] transition-all duration-500 ease-in-out px-8 py-12 border-t border-gray-100 origin-top ${
+          isOpen ? "translate-y-0 opacity-100 pointer-events-auto" : "-translate-y-4 opacity-0 pointer-events-none"
         }`}
       >
         <ul className="flex flex-col gap-10">

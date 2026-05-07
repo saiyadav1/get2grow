@@ -29,24 +29,34 @@ export default function Hero() {
                 <div className="flex-1 text-left flex flex-col justify-center pr-0">
                     <div className="mb-8 md:mb-10">
                         <h1 className="text-[32px] sm:text-[36px] md:text-[52px] leading-[1.15] font-bold text-white tracking-tight">
-                            Helping{" "}
+                            <span className="inline-block align-top mr-1 md:mr-2 mt-1 md:mt-2 text-primary opacity-80 w-[24px] h-[24px] md:w-[36px] md:h-[36px]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
+                                    <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18L0 10.609C0 4.905 3.748 1.039 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H10V18H0Z" />
+                                </svg>
+                            </span>
+                            More Leads. More Sales.{" "}
                             <span className="relative inline-block">
-                                Entrepreneurs
+                                {/* Entrepreneurs */}
                                 {/* Decorative sparks */}
-                                <div className="absolute -right-8 -top-6 md:-right-10 md:-top-8 hidden sm:block select-none pointer-events-none">
-                                    <svg width="35" height="35" viewBox="0 0 100 100" className="stroke-[#E0F2FE] fill-none transform rotate-12 md:w-[45px] md:h-[45px]" style={{ strokeWidth: 5, strokeLinecap: "round" }}>
-                                        <path d="M 25 80 Q 20 50 25 20 M 50 85 Q 50 50 60 15 M 75 80 Q 80 50 95 30" />
+                                More Growth.
+                                {/* Closing Quote */}
+                                <div className="absolute -right-8 -top-4 md:-right-12 md:-top-6 hidden sm:block select-none pointer-events-none text-primary opacity-80 w-[24px] h-[24px] md:w-[36px] md:h-[36px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
+                                        <path d="M9.983 6v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.57-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z" />
                                     </svg>
                                 </div>
+                                {/* Spark */}
+                                {/* <div className="absolute -right-[40px] -top-[35px] md:-right-[60px] md:-top-[45px] hidden sm:block select-none pointer-events-none opacity-80">
+                                    <svg width="35" height="35" viewBox="0 0 100 100" className="stroke-primary fill-none transform rotate-12 md:w-[45px] md:h-[45px]" style={{ strokeWidth: 5, strokeLinecap: "round" }}>
+                                        <path d="M 25 80 Q 20 50 25 20 M 50 85 Q 50 50 60 15 M 75 80 Q 80 50 95 30" />
+                                    </svg>
+                                </div> */}
                             </span>
-                            <br />build organic brands as<br />
-                            <span className="text-highlight">niche authorities</span>
                         </h1>
                     </div>
 
                     <p className="max-w-lg text-[14px] md:text-[18px] text-gray-400 mb-8 md:mb-12 leading-relaxed font-light">
-                        Scaling brands for niche authorities with world class organic content.
-                        Currently working with personal brands, funded startups, Crypto/trading ventures and much more.
+                        G2G Media House helps businesses grow through content, paid ads, branding, and social media strategies built to generate attention, leads, and revenue.
                     </p>
 
                     <div className="relative inline-block mb-10 w-fit">
@@ -54,7 +64,7 @@ export default function Hero() {
                             href="/contact-form"
                             className="inline-block px-5 py-3 md:px-7 md:py-3.5 bg-primary text-[#121212] text-[15px] md:text-[16px] font-bold rounded-lg hover:bg-white transition-colors shadow-[0_0_20px_rgba(34,197,94,0.25)]"
                         >
-                            Book a Discovery Call
+                            Book A Free Strategy Call
                         </Link>
 
                         {/* Free text with arrow */}
@@ -65,6 +75,7 @@ export default function Hero() {
                             </svg>
                         </div> */}
                     </div>
+
                 </div>
 
                 {/* Right Content - Carousel */}

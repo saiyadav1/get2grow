@@ -122,8 +122,8 @@ export default function PortfolioSection() {
         {/* Header */}
         <div className="text-center mb-10">
           <h2 className="text-[32px] md:text-[56px] font-black uppercase tracking-tighter leading-tight">
-            We turn <span className="text-primary">simple</span> content{" "}
-            <span className="text-primary">viral.</span>
+             <span className="text-primary">Growth </span> starts here
+            {/* <span className="text-primary">viral.</span> */}
           </h2>
           <p className="text-gray-400 italic mt-4 font-light tracking-wide">
             Ideated from scratch, created for efficiency.

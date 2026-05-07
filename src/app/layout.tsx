@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${bricolageGrotesque.variable} font-sans antialiased `}>
+      <body className={`${bricolageGrotesque.variable} font-sans antialiased overflow-x-hidden`}>
         {children}
       </body>
     </html>

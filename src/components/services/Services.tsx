@@ -2,51 +2,51 @@
 
 import { useRef, useState } from 'react';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence, useSpring, useTransform } from 'framer-motion';
-import { MonitorSmartphone, Share2, Megaphone, Video, FileText, BarChart3 } from 'lucide-react';
+import { Share2, Target, Sparkles, Video, UserCircle, Layout } from 'lucide-react';
 import Link from 'next/link';
 
 const servicesData = [
     {
-        id: "web-mobile-dev",
-        title: "Web & Mobile Development",
-        description: "Custom digital experiences built with robust, scalable technology for both web browsers and mobile devices.",
-        features: ["Responsive Web Applications", "iOS & Android Mobile Apps", "E-Commerce Platforms"],
-        icon: MonitorSmartphone,
-    },
-    {
-        id: "social",
-        title: "Social Media",
-        description: "Engaging social media campaigns that build community, foster brand loyalty, and drive measurable actions.",
-        features: ["Content Calendar Management", "Community Engagement", "Social Listening & Analytics"],
+        id: "social-media",
+        title: "Social Media Marketing",
+        description: "We manage your content so your brand stays visible, relevant, and trusted.",
+        features: ["Content strategy", "Reels & graphics", "Captions & copywriting", "Monthly posting", "Engagement strategy"],
         icon: Share2,
     },
     {
-        id: "ads",
-        title: "Paid Media & Ads",
-        description: "Highly targeted hyper-focused ad campaigns across search and social platforms to maximize ROI.",
-        features: ["PPC Campaign Management", "Retargeting Strategies", "A/B Testing & Optimization"],
-        icon: Megaphone,
+        id: "paid-ads",
+        title: "Paid Advertising",
+        description: "We run conversion-focused ad campaigns that bring qualified leads and sales.",
+        features: ["Meta Ads", "Google Ads", "Retargeting", "Ad creatives", "Conversion tracking", "Campaign optimization"],
+        icon: Target,
     },
     {
-        id: "photo-video",
-        title: "Photo & Video Editing",
-        description: "High-quality visual content creation and post-production to captivate your audience and elevate your aesthetic.",
-        features: ["Professional Color Grading", "Dynamic Video Montage", "Product & Lifestyle Retouching"],
+        id: "branding",
+        title: "Branding",
+        description: "We position your business to look premium, trustworthy, and memorable.",
+        features: ["Brand messaging", "Positioning", "Visual direction", "Tone of voice", "Brand strategy"],
+        icon: Sparkles,
+    },
+    {
+        id: "content-creation",
+        title: "Content Creation",
+        description: "We create content designed to stop attention and drive action.",
+        features: ["Short-form videos", "Reels editing", "Hooks & scripts", "UGC content", "Promotional content"],
         icon: Video,
     },
     {
-        id: "content",
-        title: "Content Marketing",
-        description: "Valuable, relevant content creation that educates your audience and positions your brand as an industry leader.",
-        features: ["Blog & Article Writing", "Video & Graphic Production", "Email Marketing & Newsletters"],
-        icon: FileText,
+        id: "personal-branding",
+        title: "Personal Branding",
+        description: "We help founders and experts build authority online.",
+        features: ["LinkedIn content", "Ghostwriting", "Thought leadership", "Personal brand strategy"],
+        icon: UserCircle,
     },
     {
-        id: "analytics",
-        title: "Data Analytics",
-        description: "In-depth tracking, reporting, and analysis to turn raw data into actionable insights for continuous growth.",
-        features: ["Custom Dashboard Creation", "Conversion Rate Optimization", "User Behavior Analysis"],
-        icon: BarChart3,
+        id: "website-funnels",
+        title: "Website & Funnels",
+        description: "We build websites and landing pages designed to convert traffic into customers.",
+        features: ["Landing pages", "Sales funnels", "Website copy", "Conversion optimization"],
+        icon: Layout,
     }
 ];
 

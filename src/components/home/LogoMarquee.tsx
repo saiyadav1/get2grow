@@ -10,7 +10,7 @@ export default function LogoMarquee() {
                 <h2 className="relative text-[24px] sm:text-[32px] md:text-[44px] font-bold text-white flex flex-wrap items-center justify-center gap-x-2 md:gap-x-3 tracking-tight">
                     <span>Trusted by</span>
                     <span className="relative text-primary drop-shadow-lg">
-                        Industry Leaders
+                        Top-Tier Professionals
 
                         {/* Sparkle SVG - positioned specifically for desktop */}
                         <svg
