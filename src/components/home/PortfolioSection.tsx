@@ -99,12 +99,12 @@ export default function PortfolioSection() {
   }, []);
 
   const videos = [
-    "https://res.cloudinary.com/dtsasu4sq/video/upload/q_auto/f_auto/v1777911448/IMG_0435_ygem30.mp4",
-    "https://res.cloudinary.com/dtsasu4sq/video/upload/q_auto/f_auto/v1777913952/IMG_0369_lldq7v.mov",
-    "https://res.cloudinary.com/dtsasu4sq/video/upload/q_auto/f_auto/v1777911448/IMG_0435_ygem30.mp4",
-    "https://res.cloudinary.com/dtsasu4sq/video/upload/q_auto/f_auto/v1777913952/IMG_0369_lldq7v.mov",
-    "https://res.cloudinary.com/dtsasu4sq/video/upload/q_auto/f_auto/v1777911448/IMG_0435_ygem30.mp4",
-    "https://res.cloudinary.com/dtsasu4sq/video/upload/q_auto/f_auto/v1777913952/IMG_0369_lldq7v.mov"
+    "https://res.cloudinary.com/di6ic3zth/video/upload/q_auto/f_auto/v1778174038/1_REEL_40MB_axxi9e.mp4",
+    "https://res.cloudinary.com/di6ic3zth/video/upload/q_auto/f_auto/v1778174951/2_piusos.mp4",
+    "https://res.cloudinary.com/di6ic3zth/video/upload/q_auto/f_auto/v1778175135/3_p74xij.mp4",
+    "https://res.cloudinary.com/di6ic3zth/video/upload/q_auto/f_auto/v1778174038/1_REEL_40MB_axxi9e.mp4",
+    "https://res.cloudinary.com/di6ic3zth/video/upload/q_auto/f_auto/v1778174951/2_piusos.mp4",
+    "https://res.cloudinary.com/di6ic3zth/video/upload/q_auto/f_auto/v1778175135/3_p74xij.mp4",
   ];
 
   const toggleMute = (e: React.MouseEvent) => {
@@ -122,7 +122,7 @@ export default function PortfolioSection() {
         {/* Header */}
         <div className="text-center mb-10">
           <h2 className="text-[32px] md:text-[56px] font-black uppercase tracking-tighter leading-tight">
-             <span className="text-primary">Growth </span> starts here
+            <span className="text-primary">Growth </span> starts here
             {/* <span className="text-primary">viral.</span> */}
           </h2>
           <p className="text-gray-400 italic mt-4 font-light tracking-wide">
