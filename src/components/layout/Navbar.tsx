@@ -17,7 +17,7 @@ export default function Navbar() {
     <nav className="w-full py-4 transition-all duration-300 font-sans sticky top-0 z-[100] bg-black/50 backdrop-blur-xl border-b border-white/5">
       <div className="container mx-auto px-6 lg:px-12 flex items-center justify-between">
         {/* Brand Identity */}
-        <Link href="/" className="flex items-center gap-4 mb-8 group">
+        <Link href="/" className="flex items-center gap-4 group">
           <div className="relative w-12 h-12 overflow-hidden rounded-xl border border-white/10 group-hover:border-primary transition-colors">
             <Image
               src="/assets/g2g_logo.png"

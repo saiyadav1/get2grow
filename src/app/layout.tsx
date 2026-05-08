@@ -9,11 +9,13 @@ const bricolageGrotesque = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "Get 2 Grow",
+  title: "Get 2 Grow | Premium Branding & Performance Marketing",
   description:
-    "We help entrepreneurs build profitable personal brands through short-form content",
+    "Premium branding. Performance driven marketing. Scalable growth system. That's g2g media for you, where you 'get 2 grow'.",
   icons: {
-    icon: "/assets/g2g_logo.png",
+    icon: [{ url: "/assets/g2g_logo.png", type: "image/png" }],
+    shortcut: "/assets/g2g_logo.png",
+    apple: "/assets/g2g_logo.png",
   },
 };
 
