@@ -1,12 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function Hero() {
-    const [activeIndex, setActiveIndex] = useState(0);
-
     const profiles = [
         { name: "Liah", followers: "247K+ Followers", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400&h=500" },
         { name: "Daniel Del Carmen", followers: "25K+ Followers", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=400&h=500" },
@@ -16,15 +12,8 @@ export default function Hero() {
         { name: "Marcus Johnson", followers: "75K+ Followers", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400&h=500" },
     ];
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setActiveIndex((prev) => (prev + 1) % profiles.length);
-        }, 3000);
-        return () => clearInterval(interval);
-    }, [profiles.length]);
-
     return (
-        <section className="relative pt-[10px] pb-[10px] px-4 overflow-hidden min-h-[100vh] flex items-center justify-center">
+        <section className="relative pt-[10px] pb-[10px] px-4 overflow-hidden min-h-[100vh]">
             {/* Grid Background with edge fade */}
             <div className="absolute inset-0 pointer-events-none" style={{
                 backgroundImage: `
@@ -35,11 +24,11 @@ export default function Hero() {
                 maskImage: 'radial-gradient(ellipse at center, black 20%, transparent 80%)',
                 WebkitMaskImage: 'radial-gradient(ellipse at center, black 20%, transparent 80%)'
             }}></div>
-            <div className="max-w-[1440px] w-full mx-auto relative z-10 flex flex-col lg:flex-row items-center gap-8 lg:gap-8 px-4 lg:px-8 py-12 lg:py-0">
+            <div className="max-w-[1440px] mx-auto relative z-10 flex flex-col lg:flex-row items-center gap-8 lg:gap-8 px-4 lg:px-8">
                 {/* Left Content */}
                 <div className="flex-1 text-left flex flex-col justify-center pr-0">
                     <div className="mb-8 md:mb-10">
-                        <h1 className="text-[34px] sm:text-[40px] md:text-[54px] lg:text-[60px] xl:text-[64px] leading-[1.1] font-bold text-white tracking-tight">
+                        <h1 className="text-[32px] sm:text-[36px] md:text-[52px] leading-[1.15] font-bold text-white tracking-tight">
                             <span className="inline-block align-top mr-1 md:mr-2 mt-1 md:mt-2 text-primary opacity-80 w-[24px] h-[24px] md:w-[36px] md:h-[36px]">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
                                     <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18L0 10.609C0 4.905 3.748 1.039 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H10V18H0Z" />
@@ -89,66 +78,68 @@ export default function Hero() {
 
                 </div>
 
-                {/* Right Content - Custom 3D Carousel */}
-                <div className="flex-1 w-full lg:w-[50vw] xl:w-[600px] h-auto relative mt-6 md:mt-8 lg:mt-0 flex flex-col items-center justify-center perspective-[1200px]">
-                    
-                    {/* Main Active Image with 3D Flip */}
-                    <div className="w-full max-w-[300px] sm:max-w-[360px] md:max-w-[400px] lg:max-w-[440px] aspect-square relative preserve-3d mx-auto">
-                        <AnimatePresence mode="popLayout">
-                            <motion.div
-                                key={activeIndex}
-                                initial={{ rotateX: -45, opacity: 0, scale: 0.5, y: 120, zIndex: 10 }}
-                                animate={{ rotateX: 0, opacity: 1, scale: 1, y: 0, zIndex: 10 }}
-                                exit={{ rotateX: 20, opacity: 0, scale: 0.85, y: -40, zIndex: 0 }}
-                                transition={{ type: "spring", stiffness: 250, damping: 18, mass: 1 }}
-                                className="absolute inset-0 w-full h-full rounded-full overflow-hidden border border-white/10 bg-[#1a1a24] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)]"
-                                style={{ transformOrigin: "bottom center" }}
-                            >
-                                <img src={profiles[activeIndex].image} alt={profiles[activeIndex].name} className="absolute inset-0 w-full h-full object-cover" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-                                <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 pb-8 md:pb-10 flex flex-col items-center text-center">
-                                    <div className="flex items-center gap-2 mb-1 relative z-10">
-                                        <div className="w-5 h-5 md:w-6 md:h-6 shrink-0 rounded-[6px] md:rounded-[8px] bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] flex items-center justify-center p-[2px] md:p-[3px]">
-                                            <div className="w-full h-full border-white border-[1.5px] rounded-[4px] relative">
-                                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 border-white border-[1.5px] rounded-full"></div>
-                                            </div>
-                                        </div>
-                                        <p className="text-white font-bold text-[18px] md:text-[22px] drop-shadow-md">{profiles[activeIndex].name}</p>
-                                    </div>
-                                    <p className="text-gray-300 text-[13px] md:text-[15px] font-medium">{profiles[activeIndex].followers}</p>
-                                </div>
-                            </motion.div>
-                        </AnimatePresence>
-                    </div>
+                {/* Right Content - Carousel */}
+                <div className="flex-1 w-full lg:w-auto h-[50vh] md:h-[620px] max-h-[50vh] md:max-h-none overflow-hidden relative mt-6 md:mt-8 lg:mt-0">
+                    {/* Gradient masks for smooth fade at top and bottom */}
+                    <div className="absolute inset-0 pointer-events-none z-10" style={{
+                        background: 'linear-gradient(to bottom, var(--background) 0%, transparent 18%, transparent 82%, var(--background) 100%)'
+                    }}></div>
 
-                    {/* Thumbnails Row */}
-                    <div className="mt-8 md:mt-10 flex items-center gap-3 overflow-x-auto pb-4 max-w-full px-4 snap-x hide-scrollbar justify-start sm:justify-center w-full">
-                        {profiles.map((profile, i) => (
-                            <button
-                                key={`thumb-${i}`}
-                                onClick={() => setActiveIndex(i)}
-                                className={`relative shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden snap-center transition-all duration-300 ${activeIndex === i ? 'ring-2 ring-white ring-offset-2 ring-offset-[#0a0a0a] scale-110 shadow-[0_0_20px_rgba(255,255,255,0.2)] z-10' : 'opacity-40 hover:opacity-100 grayscale-[0.8] hover:grayscale-0 scale-95'}`}
-                            >
-                                <img src={profile.image} alt={profile.name} className="w-full h-full object-cover" />
-                            </button>
-                        ))}
+                    <div className="flex gap-3 md:gap-5 h-full relative justify-center md:justify-end pr-0 md:pr-4">
+                        {/* Column 1 */}
+                        <div className="flex flex-col gap-3 md:gap-5 animate-scroll-vertical w-[45%] sm:w-[48%] md:w-[300px] xl:w-[400px]" style={{ animationDelay: '-8s' }}>
+                            {[...profiles, ...profiles].map((profile, i) => (
+                                <div
+                                    key={`col1-${i}`}
+                                    className={`relative rounded-2xl md:rounded-3xl overflow-hidden shrink-0 border border-white/5 bg-[#1a1a24] group ${i % 2 === 0
+                                        ? 'h-[200px] md:h-[480px] xl:h-[450px]'
+                                        : 'h-[150px] md:h-[480px] xl:h-[450px]'
+                                        }`}
+                                >
+                                    <img src={profile.image} alt={profile.name} className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                                    <div className="absolute bottom-0 left-0 right-0 p-2 md:p-5">
+                                        <div className="flex items-center gap-1 md:gap-2 mb-0.5 relative z-10">
+                                            <div className="w-4 h-4 md:w-5 md:h-5 shrink-0 rounded-[4px] md:rounded-[6px] bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] flex items-center justify-center p-[2px] md:p-[3px]">
+                                                <div className="w-full h-full border-white border-[1px] md:border-[1.5px] rounded-[3px] md:rounded-[5px] relative">
+                                                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-1 md:w-1.5 md:h-1.5 border-white border-[1px] md:border-[1.5px] rounded-full"></div>
+                                                </div>
+                                            </div>
+                                            <p className="text-white font-semibold text-[11px] md:text-[15px] truncate drop-shadow-md">{profile.name}</p>
+                                        </div>
+                                        <p className="text-gray-300 text-[10px] md:text-[13px] font-medium">{profile.followers}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Column 2 — offset downward for masonry stagger */}
+                        <div className="flex flex-col gap-3 md:gap-5 animate-scroll-vertical-reverse w-[45%] sm:w-[48%] md:w-[300px] xl:w-[400px] mt-10 md:mt-16" style={{ animationDelay: '-14s' }}>
+                            {[...profiles].reverse().concat([...profiles].reverse()).map((profile, i) => (
+                                <div
+                                    key={`col2-${i}`}
+                                    className={`relative rounded-2xl md:rounded-3xl overflow-hidden shrink-0 border border-white/5 bg-[#1a1a24] group ${i % 2 === 0
+                                        ? 'h-[150px] md:h-[480px] xl:h-[450px]'
+                                        : 'h-[200px] md:h-[480px] xl:h-[450px]'
+                                        }`}
+                                >
+                                    <img src={profile.image} alt={profile.name} className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                                    <div className="absolute bottom-0 left-0 right-0 p-2 md:p-5">
+                                        <div className="flex items-center gap-1 md:gap-2 mb-0.5 relative z-10">
+                                            <div className="w-4 h-4 md:w-5 md:h-5 shrink-0 rounded-[4px] md:rounded-[6px] bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] flex items-center justify-center p-[2px] md:p-[3px]">
+                                                <div className="w-full h-full border-white border-[1px] md:border-[1.5px] rounded-[3px] md:rounded-[5px] relative">
+                                                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-1 md:w-1.5 md:h-1.5 border-white border-[1px] md:border-[1.5px] rounded-full"></div>
+                                                </div>
+                                            </div>
+                                            <p className="text-white font-semibold text-[11px] md:text-[15px] truncate drop-shadow-md">{profile.name}</p>
+                                        </div>
+                                        <p className="text-gray-300 text-[10px] md:text-[13px] font-medium">{profile.followers}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                    
-                    <style jsx>{`
-                        .hide-scrollbar::-webkit-scrollbar {
-                            display: none;
-                        }
-                        .hide-scrollbar {
-                            -ms-overflow-style: none;
-                            scrollbar-width: none;
-                        }
-                        .preserve-3d {
-                            transform-style: preserve-3d;
-                        }
-                        .perspective-[1200px] {
-                            perspective: 1200px;
-                        }
-                    `}</style>
                 </div>
             </div>
         </section>

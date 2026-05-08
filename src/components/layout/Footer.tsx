@@ -25,9 +25,12 @@ export default function Footer() {
                                 Get<span className="text-primary">2</span>Grow
                             </span>
                         </Link>
-                        <h2 className="text-[32px] md:text-[48px] font-black leading-[1.1] uppercase tracking-tighter">
-                            Ready to turn your knowledge into <span className="text-primary">influence?</span>
+                        <h2 className="text-[32px] md:text-[40px] font-black leading-[1.1] uppercase tracking-tighter">
+                            Premium branding. Performance driven marketing. <span className="text-primary">Scalable growth system.</span>
                         </h2>
+                        <p className="mt-6 text-lg md:text-xl text-gray-400 font-medium">
+                            That&apos;s G2G Media for you, where you &quot;Get 2 Grow&quot;
+                        </p>
                     </div>
 
                     <Link
@@ -57,7 +60,7 @@ export default function Footer() {
                     <div>
                         <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-8">Agency</h4>
                         <ul className="space-y-4 font-medium">
-                            <li><Link href="#about" className="hover:text-primary transition-colors">About Us</Link></li>
+                            <li><Link href="#section_problems" className="hover:text-primary transition-colors">About Us</Link></li>
                             {/* <li><Link href="#process" className="hover:text-primary transition-colors">Our Process</Link></li> */}
                             <li><Link href="#faq" className="hover:text-primary transition-colors">FAQ</Link></li>
                         </ul>
