@@ -18,12 +18,12 @@ export default function Navbar() {
       <div className="container mx-auto px-6 lg:px-12 flex items-center justify-between">
         {/* Brand Identity */}
         <Link href="/" className="flex items-center gap-4 group">
-          <div className="relative w-12 h-12 overflow-hidden rounded-xl border border-white/10 group-hover:border-primary transition-colors">
+          <div className="relative w-12 h-12 overflow-hidden rounded-xl transition-colors">
             <Image
               src="/assets/g2g_logo.png"
               alt="Get 2 Grow Logo"
               fill
-              className="object-cover p-2"
+              className="object-cover "
             />
           </div>
           <span className="font-black text-white text-2xl uppercase tracking-tighter">

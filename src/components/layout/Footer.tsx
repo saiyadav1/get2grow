@@ -13,12 +13,12 @@ export default function Footer() {
                 <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12 mb-20">
                     <div className="max-w-xl">
                         <Link href="/" className="flex items-center gap-4 mb-8 group">
-                            <div className="relative w-12 h-12 overflow-hidden rounded-xl border border-white/10 group-hover:border-primary transition-colors">
+                            <div className="relative w-12 h-12 overflow-hidden rounded-xl transition-colors">
                                 <Image
                                     src="/assets/g2g_logo.png"
                                     alt="Get 2 Grow Logo"
                                     fill
-                                    className="object-cover p-2"
+                                    className="object-cover"
                                 />
                             </div>
                             <span className="font-black text-2xl uppercase tracking-tighter">
@@ -26,10 +26,16 @@ export default function Footer() {
                             </span>
                         </Link>
                         <h2 className="text-[32px] md:text-[40px] font-black leading-[1.1] uppercase tracking-tighter">
-                            Premium branding. Performance driven marketing. <span className="text-primary">Scalable growth system.</span>
+                            Premium branding.
+                            <br />
+                            Performance driven marketing.
+                            <br />
+                            <span className="text-primary">Scalable growth system.</span>
                         </h2>
                         <p className="mt-6 text-lg md:text-xl text-gray-400 font-medium">
-                            That&apos;s G2G Media for you, where you &quot;Get 2 Grow&quot;
+                            That&apos;s G2G Media for you,
+                            <br />
+                            where you &quot;Get2Grow&quot;
                         </p>
                     </div>
 
@@ -70,10 +76,10 @@ export default function Footer() {
                     <div className="col-span-2 md:col-span-1">
                         <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-8">Connect</h4>
                         <a
-                            href="mailto:get2grow@gmail.com"
+                            href="mailto:natasha@g2gmediahouse.com"
                             className="text-xl md:text-2xl font-bold hover:text-primary transition-all break-words"
                         >
-                            get2grow@gmail.com
+                            natasha@g2gmediahouse.com
                         </a>
                         <p className="text-gray-500 text-sm mt-4">Based in Hyderabad, India.</p>
                     </div>
