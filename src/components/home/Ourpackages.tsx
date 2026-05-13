@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 const packages = [
   {
     id: "core",
-    label: "G2G CORE",
+    label: "G2G-STARTER",
     labelColor: "#d4f26b",   // lime-yellow accent (matches screenshot)
     tagline: "You create. We produce.",
     description:
@@ -29,7 +29,7 @@ const packages = [
   },
   {
     id: "os",
-    label: "G2G OS",
+    label: "G2G-GROWTH",
     labelColor: "#f5c842",   // amber accent
     tagline: "Your entire content operation. Run by us.",
     description:
@@ -49,7 +49,7 @@ const packages = [
   },
   {
     id: "studio",
-    label: "G2G STUDIO",
+    label: "G2G-AUTHORITY",
     labelColor: "#c4b5fd",   // violet accent
     tagline: "Full-scale production for brands operating at volume.",
     description:
@@ -166,23 +166,13 @@ function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
 
       {/* CTA */}
       <div className="mt-8">
-        {pkg.ctaStyle === "solid" ? (
-          <button
-            onClick={() => router.push("/contact-form")}
-            className="w-full py-3 rounded-xl text-base font-bold tracking-wide transition-all duration-300
-              bg-primary text-black hover:bg-primary/90 hover:scale-[1.02] active:scale-100"
-          >
-            {pkg.cta}
-          </button>
-        ) : (
-          <button
-            onClick={() => router.push("/contact-form")}
-            className="w-full py-3 rounded-xl text-base font-bold tracking-wide transition-all duration-300
+        <button
+          onClick={() => router.push("/contact-form")}
+          className="w-full py-3 rounded-xl text-base font-bold tracking-wide transition-all duration-300
               border border-white/20 text-white hover:border-primary hover:text-primary hover:scale-[1.02] active:scale-100"
-          >
-            {pkg.cta}
-          </button>
-        )}
+        >
+          {pkg.cta}
+        </button>
       </div>
 
       {/* Highlight glow */}
