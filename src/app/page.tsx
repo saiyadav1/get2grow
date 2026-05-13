@@ -10,6 +10,7 @@ import StatsChips from "@/components/home/StatsChips";
 import Intro from "@/components/home/Intro";
 import PortfolioSection from "@/components/home/PortfolioSection";
 import Services from "@/components/services/Services";
+import UserSs from "@/components/home/UserSs";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <AboutSection />
       <OurProcess />
       <TestimonialsSection />
+      <UserSs />
       <FAQSection />
       <Footer />
 
