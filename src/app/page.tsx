@@ -11,6 +11,7 @@ import Intro from "@/components/home/Intro";
 import PortfolioSection from "@/components/home/PortfolioSection";
 import Services from "@/components/services/Services";
 import UserSs from "@/components/home/UserSs";
+import OurPackages from "@/components/home/Ourpackages";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <Services />
       <AboutSection />
       <OurProcess />
+      <OurPackages />
       <TestimonialsSection />
       <UserSs />
       <FAQSection />

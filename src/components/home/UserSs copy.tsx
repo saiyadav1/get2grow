@@ -1,9 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
-export default function UserSs() {
+const messages = [
+  { from: "them", name: "Samantha", text: "Who wrote this 🥺", time: "7:28 PM" },
+  { from: "us", text: "Natasha, she just started handling the account", time: "7:32 PM", ticks: true },
+  { from: "them", name: "Samantha", text: "Who is Natasha?", time: "7:32 PM" },
+  { from: "us", text: "Our social media manager", time: "7:33 PM", ticks: true },
+  { from: "them", name: "Samantha", text: "Love it ❤️", time: "7:33 PM" },
+];
+
+export default function UserSs1() {
   return (
     <section className="py-20 md:py-32 relative overflow-hidden border-t border-white/5">
       {/* Background glow */}
@@ -25,7 +32,7 @@ export default function UserSs() {
             Even the <span className="text-primary italic">Stars</span> Notice
           </h2>
           <p className="mt-4 text-gray-400 text-[17px] max-w-2xl mx-auto leading-relaxed">
-            When Bollywood actress <span className="text-white font-semibold">Samantha Ruth Prabhu</span> saw our
+            When Bollywood actress <span className="text-white font-semibold">Samantha</span> saw our
             content for <span className="text-primary font-semibold">Gataca</span> on Instagram,
             she had just one thing to say.
           </p>
@@ -56,7 +63,7 @@ export default function UserSs() {
                 </div>
               </div>
               <p className="text-gray-300 text-[15px] leading-relaxed">
-                Managed  <span className="text-white font-semibold">Gataca's</span> Instagram account end-to-end — from scripting and designing to publishing content consistently. In just one month, the page grew to 14,000 followers with a major boost in engagement and reach. The content aligned with the brand, performed well organically, and connected with the audience.
+                We managed <span className="text-white font-semibold">Gataca's</span> Instagram account — scripting, designing, and publishing high-converting content that resonated with audiences at the highest level.
               </p>
 
               {/* Stats row */}
@@ -87,7 +94,7 @@ export default function UserSs() {
                   S
                 </div>
                 <div>
-                  <p className="text-white font-semibold text-sm">Samantha Ruth Prabhu</p>
+                  <p className="text-white font-semibold text-sm">Samantha</p>
                   <p className="text-primary text-[11px] uppercase tracking-widest font-bold">Bollywood Actress</p>
                 </div>
               </div>
@@ -128,18 +135,49 @@ export default function UserSs() {
                   </div>
                 </div>
 
-                {/* Real screenshot */}
-                <Image
-                  src="/assets/testimonial/Samantha_ss.jpeg"
-                  alt="WhatsApp screenshot — Samantha reacting to Gataca content"
-                  width={680}
-                  height={960}
-                  className="w-full object-cover"
-                  priority
-                />
+                {/* Chat messages */}
+                <div className="bg-[#0d1117] px-4 py-5 space-y-3 min-h-[380px]"
+                  style={{
+                    backgroundImage: `radial-gradient(circle at 20% 80%, rgba(238,157,43,0.04) 0%, transparent 50%),
+                                      radial-gradient(circle at 80% 20%, rgba(238,157,43,0.03) 0%, transparent 50%)`
+                  }}
+                >
+                  {messages.map((msg, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, y: 8 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: 0.3 + i * 0.12 }}
+                      className={`flex ${msg.from === "us" ? "justify-end" : "justify-start"}`}
+                    >
+                      <div
+                        className={`max-w-[75%] rounded-2xl px-4 py-2.5 shadow-sm ${msg.from === "us"
+                            ? "bg-primary text-black rounded-br-sm"
+                            : "bg-[#1f2937] text-white rounded-bl-sm border border-white/5"
+                          }`}
+                      >
+                        {msg.from === "them" && msg.name && (
+                          <p className="text-primary text-[10px] font-bold mb-1 uppercase tracking-wider">{msg.name}</p>
+                        )}
+                        <p className={`text-[13px] font-medium leading-snug ${msg.from === "us" ? "text-black" : "text-white"}`}>
+                          {msg.text}
+                        </p>
+                        <div className={`flex items-center justify-end gap-1 mt-1 ${msg.from === "us" ? "text-black/50" : "text-white/30"}`}>
+                          <span className="text-[10px]">{msg.time}</span>
+                          {msg.ticks && (
+                            <svg className="w-3 h-3 text-blue-400" fill="currentColor" viewBox="0 0 16 16">
+                              <path d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 11.293 1.854 8.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0l7-7zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0z" />
+                            </svg>
+                          )}
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
 
                 {/* Input bar */}
-                {/* <div className="bg-[#0a0a0a] px-4 py-3 flex items-center gap-3 border-t border-white/5">
+                <div className="bg-[#0a0a0a] px-4 py-3 flex items-center gap-3 border-t border-white/5">
                   <div className="flex-1 bg-[#1f2937] rounded-full px-4 py-2 text-white/20 text-sm border border-white/5">
                     Type a message…
                   </div>
@@ -148,7 +186,7 @@ export default function UserSs() {
                       <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
                     </svg>
                   </div>
-                </div> */}
+                </div>
               </div>
 
               {/* Instagram post badge */}
