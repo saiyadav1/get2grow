@@ -89,7 +89,7 @@ export default function Footer() {
                         <div className="flex gap-4">
                             {[
                                 { icon: <FaYoutube />, link: "#" },
-                                { icon: <FaInstagram />, link: "https://www.instagram.com/whysaksham" },
+                                { icon: <FaInstagram />, link: "https://www.instagram.com/g2gmediahouse?utm_source=qr&igsh=b2xyY3ltaTE0d3J4" },
                                 { icon: <FaLinkedin />, link: "#" }
                             ].map((social, i) => (
                                 <a
