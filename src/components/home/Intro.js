@@ -59,7 +59,7 @@ export default function Intro() {
                         {/* Card Content */}
                         <div className="bg-[#111116] border border-white/[0.06] rounded-2xl p-8 lg:p-10 shadow-2xl lg:-rotate-[6deg] transition-transform duration-500 hover:rotate-0 hover:z-20 h-full flex flex-col justify-between relative z-10">
                             <p className="text-gray-100 text-[16px] md:text-[18px] lg:text-[20px] leading-[1.65] lg:leading-[1.7]">
-                                Metro Media House helped me grow to <span className="text-primary font-semibold">50K in just 2 months</span> with constant support, strategy, and dedication. Their consistency made all the difference
+                                Get 2 grow  Media House helped me grow to <span className="text-primary font-semibold">50K in just 2 months</span> with constant support, strategy, and dedication. Their consistency made all the difference
                             </p>
                             <div className="mt-10 md:mt-12">
                                 <p className="text-white font-bold text-[15px]">Zeel Mehta Jain</p>

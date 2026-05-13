@@ -146,45 +146,45 @@ export default function TestimonialsSection() {
                       </div>
                     </div>
 
-                  <div className="flex flex-col items-start">
-                    <svg
-                      width="32"
-                      height="32"
-                      viewBox="0 0 44 34"
-                      fill="none"
-                      className="text-primary opacity-30 mb-6"
-                    >
-                      <path
-                        d="M12.5 0C5.6 0 0 5.6 0 12.5V34H17.5V12.5H7.5C7.5 9.7 9.7 7.5 12.5 7.5V0ZM39 0C32.1 0 26.5 5.6 26.5 12.5V34H44V12.5H34C34 9.7 36.2 7.5 39 7.5V0Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-
-                    <p className="text-white text-[20px] md:text-[24px] leading-[1.4] font-medium tracking-tight mb-8">
-                      {testimonial.quote}
-                    </p>
-
-                    <div className="flex items-center gap-4">
-                      <div className="relative w-14 h-14 rounded-full overflow-hidden border border-primary/20 bg-slate-50">
-                        <Image
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          fill
-                          className="object-cover"
+                    <div className="flex flex-col items-start">
+                      <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 44 34"
+                        fill="none"
+                        className="text-primary opacity-30 mb-6"
+                      >
+                        <path
+                          d="M12.5 0C5.6 0 0 5.6 0 12.5V34H17.5V12.5H7.5C7.5 9.7 9.7 7.5 12.5 7.5V0ZM39 0C32.1 0 26.5 5.6 26.5 12.5V34H44V12.5H34C34 9.7 36.2 7.5 39 7.5V0Z"
+                          fill="currentColor"
                         />
-                      </div>
-                      <div>
-                        <div className="font-bold text-lg text-white uppercase tracking-tight">
-                          {testimonial.name}
+                      </svg>
+
+                      <p className="text-white text-[20px] md:text-[24px] leading-[1.4] font-medium tracking-tight mb-8">
+                        {testimonial.quote}
+                      </p>
+
+                      <div className="flex items-center gap-4">
+                        <div className="relative w-14 h-14 rounded-full overflow-hidden border border-primary/20 bg-slate-50">
+                          <Image
+                            src={testimonial.image}
+                            alt={testimonial.name}
+                            fill
+                            className="object-cover"
+                          />
                         </div>
-                        <div className="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">
+                        <div>
+                          <div className="font-bold text-lg text-white uppercase tracking-tight">
+                            {testimonial.name}
+                          </div>
+                          {/* <div className="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">
                           {testimonial.role}
+                        </div> */}
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                </div>
+                  </div>
                 )}
               </SwiperSlide>
             ))}

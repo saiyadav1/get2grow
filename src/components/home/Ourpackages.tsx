@@ -60,9 +60,9 @@ const packages = [
       "Dedicated clipping team",
       "Best for enterprise projects",
     ],
-    cta: "Let's Talk",
-    ctaStyle: "solid" as const,
-    highlight: false,
+    cta: "Apply",
+    ctaStyle: "outline" as const,
+    highlight: true,
   },
 ];
 
