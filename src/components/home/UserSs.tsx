@@ -60,15 +60,15 @@ export default function UserSs() {
               </p>
 
               {/* Stats row */}
-              <div className="mt-6 grid grid-cols-3 gap-4">
+              <div className="mt-6 grid grid-cols-3 gap-2 md:gap-4">
                 {[
                   { label: "Platform", value: "Instagram" },
                   { label: "Service", value: "Social Media" },
                   { label: "Result", value: "Celebrity 👀" },
                 ].map((s, i) => (
-                  <div key={i} className="text-center bg-white/5 rounded-2xl p-3 border border-white/5">
-                    <p className="text-primary font-bold text-sm">{s.value}</p>
-                    <p className="text-gray-500 text-[11px] mt-1 uppercase tracking-widest">{s.label}</p>
+                  <div key={i} className="text-center bg-white/5 rounded-2xl p-2 md:p-3 border border-white/5">
+                    <p className="text-primary font-bold text-[11px] md:text-sm break-words leading-tight">{s.value}</p>
+                    <p className="text-gray-500 text-[10px] md:text-[11px] mt-1 uppercase tracking-widest">{s.label}</p>
                   </div>
                 ))}
               </div>
@@ -157,7 +157,7 @@ export default function UserSs() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.6 }}
-                className="absolute -bottom-6 -left-6 bg-gradient-to-br from-[#833ab4] via-[#fd1d1d] to-[#fcb045] p-[2px] rounded-2xl shadow-xl"
+                className="absolute -bottom-6 left-2 md:-left-6 bg-gradient-to-br from-[#833ab4] via-[#fd1d1d] to-[#fcb045] p-[2px] rounded-2xl shadow-xl"
               >
                 <div className="bg-[#111] rounded-[14px] px-4 py-3 flex items-center gap-3">
                   <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">

@@ -26,9 +26,9 @@ export default function Hero() {
             }}></div>
             <div className="max-w-[1440px] mx-auto relative z-10 flex flex-col lg:flex-row items-center gap-8 lg:gap-8 px-4 lg:px-8">
                 {/* Left Content */}
-                <div className="flex-1 text-left flex flex-col justify-center pr-0">
+                <div className="flex-1 text-center lg:text-left flex flex-col justify-center pr-0">
                     <div className="mb-8 md:mb-10">
-                        <h1 className="text-[32px] sm:text-[36px] md:text-[52px] leading-[1.15] font-bold text-white tracking-tight">
+                        <h1 className="text-[32px] sm:text-[36px] md:text-[52px] leading-[1.15] font-bold text-white tracking-tight text-center lg:text-left">
                             <span className="inline-block align-top mr-1 md:mr-2 mt-1 md:mt-2 text-primary opacity-80 w-[24px] h-[24px] md:w-[36px] md:h-[36px]">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
                                     <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18L0 10.609C0 4.905 3.748 1.039 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H10V18H0Z" />
@@ -55,11 +55,11 @@ export default function Hero() {
                         </h1>
                     </div>
 
-                    <p className="max-w-lg text-[14px] md:text-[18px] text-gray-400 mb-8 md:mb-12 leading-relaxed font-light">
+                    <p className="max-w-lg mx-auto lg:mx-0 text-center lg:text-left text-[14px] md:text-[18px] text-gray-400 mb-8 md:mb-12 leading-relaxed font-light">
                         G2G Media House helps businesses grow through content, paid ads, branding, and social media strategies built to generate attention, leads, and revenue.
                     </p>
 
-                    <div className="relative inline-block mb-10 w-fit">
+                    <div className="relative flex justify-center lg:justify-start mb-10">
                         <Link
                             href="/contact-form"
                             className="inline-block px-5 py-3 md:px-7 md:py-3.5 bg-primary text-[#121212] text-[15px] md:text-[16px] font-bold rounded-lg hover:bg-white transition-colors shadow-[0_0_20px_rgba(34,197,94,0.25)]"
