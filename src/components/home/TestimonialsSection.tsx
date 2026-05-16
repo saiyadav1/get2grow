@@ -74,7 +74,7 @@ export default function TestimonialsSection() {
         "https://cdn.prod.website-files.com/6778043699a2f913f47628dd/6778043699a2f913f476291d_placeholder-image.svg",
     },
     {
-      videoUrl: "https://res.cloudinary.com/dtsasu4sq/video/upload/q_auto/f_auto/v1777913952/IMG_0369_lldq7v.mov",
+      videoUrl: "https://res.cloudinary.com/di6ic3zth/video/upload/q_auto/f_auto/v1778933618/G2G_Video_jqzhka.mp4",
       quote:
         "Their content and ad strategy brought real growth, not just engagement.",
       name: "Karanvir Singh",
@@ -82,15 +82,15 @@ export default function TestimonialsSection() {
       image:
         "https://cdn.prod.website-files.com/6778043699a2f913f47628dd/6778043699a2f913f476291d_placeholder-image.svg",
     },
-    {
-      videoUrl: "https://res.cloudinary.com/dtsasu4sq/video/upload/q_auto/f_auto/v1777913952/IMG_0369_lldq7v.mov",
-      quote:
-        "Professional, creative, and focused on results.",
-      name: "Karanvir Singh",
-      role: "Founder – Get2Grow",
-      image:
-        "https://cdn.prod.website-files.com/6778043699a2f913f47628dd/6778043699a2f913f476291d_placeholder-image.svg",
-    }
+    // {
+    //   videoUrl: "https://res.cloudinary.com/dtsasu4sq/video/upload/q_auto/f_auto/v1777913952/IMG_0369_lldq7v.mov",
+    //   quote:
+    //     "Professional, creative, and focused on results.",
+    //   name: "Karanvir Singh",
+    //   role: "Founder – Get2Grow",
+    //   image:
+    //     "https://cdn.prod.website-files.com/6778043699a2f913f47628dd/6778043699a2f913f476291d_placeholder-image.svg",
+    // }
     // add more here
   ];
 

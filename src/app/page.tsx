@@ -30,16 +30,10 @@ export default function Home() {
       <UserSs />
       <FAQSection />
       <Footer />
-
-
-
-
       {/* <WheelSection /> */}
       {/* <ServicesSection /> */}
       {/* <LetterSection /> */}
       {/* <ContactSection /> */}
-
-
     </main>
   );
 }
