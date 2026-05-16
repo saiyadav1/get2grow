@@ -41,13 +41,13 @@ function TestimonialVideo({ src, isActive }: { src: string; isActive: boolean })
         controls={true}
         preload="metadata"
       />
-      <button
+      {/* <button
         onClick={toggleMute}
         className="absolute bottom-4 left-4 bg-black/50 hover:bg-black/80 text-white p-2 rounded-full backdrop-blur-sm transition-all z-10"
         aria-label="Toggle sound"
       >
         {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
-      </button>
+      </button> */}
     </>
   );
 }
