@@ -193,12 +193,7 @@ function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
         ))}
       </ul>
 
-      {/* Price */}
-      <div className="mt-8">
-        <div className="text-2xl font-black text-primary">
-          {pkg.price}
-        </div>
-      </div>
+      {/* Price removed as requested */}
 
       {/* CTA */}
       <div className="mt-6">

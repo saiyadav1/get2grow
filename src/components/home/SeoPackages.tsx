@@ -171,14 +171,14 @@ function SeoPackageCard({ pkg, index }: { pkg: SeoPkg; index: number }) {
         </ul>
       </div>
 
-      {/* Bottom Pricing Pill Button */}
+      {/* Contact Button without price */}
       <div className="mt-10">
         <Link href={`/contact-form?service=SEO&package=${pkg.id}`} className="block w-full">
           <motion.div
             whileTap={{ scale: 0.98 }}
             className={`w-full py-4 rounded-full text-center text-base font-black uppercase tracking-wider transition-all duration-300 cursor-pointer ${pkg.pillColor}`}
           >
-            {pkg.price}
+            Contact Us
           </motion.div>
         </Link>
       </div>
