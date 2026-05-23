@@ -153,6 +153,8 @@ export default function ContactSection() {
                                         <option value="WhatsApp API">WhatsApp API</option>
                                         <option value="Video Editing">Video Editing</option>
                                         <option value="Conversion Optimization">Conversion Optimization</option>
+                                        <option value="SEO">SEO</option>
+                                        <option value="Brand Creation">Brand Creation</option>
                                     </select>
                                 </div>
 

@@ -50,7 +50,7 @@ export default function Footer() {
                 <hr className="border-white/5 mb-16" />
 
                 {/* Middle Section: Navigation & Contact */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 mb-20">
 
                     {/* Column 1: Explore */}
                     <div>
@@ -58,7 +58,7 @@ export default function Footer() {
                         <ul className="space-y-4 font-medium">
                             <li><Link href="#services" className="hover:text-primary transition-colors">Services</Link></li>
                             <li><Link href="#section_testimonials" className="hover:text-primary transition-colors">Testimonials</Link></li>
-                            <li><Link href="#portfolio" className="hover:text-primary transition-colors">Portfolio</Link></li>
+                            <li><Link href="#OurPackages" className="hover:text-primary transition-colors">Our Packages</Link></li>
                         </ul>
                     </div>
 
@@ -73,19 +73,41 @@ export default function Footer() {
                     </div>
 
                     {/* Column 3: Contact */}
-                    <div className="col-span-2 md:col-span-1">
+                    <div>
                         <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-8">Connect</h4>
                         <a
                             href="mailto:natasha@g2gmediahouse.com"
-                            className="text-xl md:text-2xl font-bold hover:text-primary transition-all break-words"
+                            className="text-xl font-bold hover:text-primary transition-all break-words block mb-2"
                         >
                             natasha@g2gmediahouse.com
                         </a>
-                        <p className="text-gray-500 text-sm mt-4">Based in Hyderabad, India.</p>
+                        <p className="text-gray-500 text-sm">Based in Hyderabad, India.</p>
                     </div>
 
-                    {/* Column 4: Socials */}
-                    <div className="col-span-2 md:col-span-1 flex md:justify-end items-start">
+                    {/* Column 4: Location */}
+                    <div>
+                        <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-8">Location</h4>
+                        <a
+                            href="https://www.google.com/maps/search/Aziz%20Towers/@17.3996355,78.48141308,17z?hl=en"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm font-semibold hover:text-primary transition-colors block mb-4"
+                        >
+                            Aziz Towers, Hyderguda, Hyderabad, India
+                        </a>
+                        <iframe
+                            src="https://maps.google.com/maps?q=Aziz%20Towers,%20Hyderguda,%20Hyderabad,%20India&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            width="100%"
+                            height="120"
+                            style={{ border: 0 }}
+                            allowFullScreen={true}
+                            loading="lazy"
+                            className="rounded-xl opacity-80 hover:opacity-100 transition-opacity duration-300 border border-white/10"
+                        ></iframe>
+                    </div>
+
+                    {/* Column 5: Socials */}
+                    <div className="col-span-2 lg:col-span-1 flex lg:justify-end items-start">
                         <div className="flex gap-4">
                             {[
                                 { icon: <FaYoutube />, link: "#" },

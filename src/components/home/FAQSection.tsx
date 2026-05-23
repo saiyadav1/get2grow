@@ -23,7 +23,7 @@ export default function FAQSection() {
     ];
 
     return (
-        <section className="py-20">
+        <section className="py-20" id="faq">
             <div className="container mx-auto px-4 max-w-4xl">
                 <div className="flex flex-col md:flex-row gap-8 mb-16">
                     <div className="w-full md:w-1/2">

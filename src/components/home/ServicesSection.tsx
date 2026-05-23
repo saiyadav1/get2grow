@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Share2, Target, Sparkles, Video, UserCircle, Layout } from "lucide-react";
+import { Share2, Target, Sparkles, Video, UserCircle, Layout, TrendingUp, Palette } from "lucide-react";
 
 export default function ServicesSection() {
     const services = [
@@ -27,7 +27,7 @@ export default function ServicesSection() {
             title: "Content Creation",
             description: "We create content designed to stop attention and drive action.",
             icon: Video,
-            items: ["Short-form videos", "Reels editing", "Hooks & scripts", "UGC content", "Promotional content"],
+            items: ["Short-form videos", "Reels editing", "Hooks & scripts", "UGC content", "Promotional content", "Long-form content"],
         },
         {
             title: "Personal Branding",
@@ -40,6 +40,18 @@ export default function ServicesSection() {
             description: "We build websites and landing pages designed to convert traffic into customers.",
             icon: Layout,
             items: ["Landing pages", "Sales funnels", "Website copy", "Conversion optimization"],
+        },
+        {
+            title: "SEO",
+            description: "We optimize your search visibility to drive organic growth and capture high-intent customers.",
+            icon: TrendingUp,
+            items: ["Keyword Research", "Competitor Research", "On-Page SEO", "Off-Page SEO", "Page Optimization", "Link Building"],
+        },
+        {
+            title: "Brand Creation",
+            description: "We shape new brands from ground up, crafting compelling identities that build instant trust.",
+            icon: Palette,
+            items: ["Logo design", "Visual identity", "Brand guidelines", "Typography & palette", "Brand assets", "Collateral design"],
         },
     ];
 

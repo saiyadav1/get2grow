@@ -12,6 +12,7 @@ import PortfolioSection from "@/components/home/PortfolioSection";
 import Services from "@/components/services/Services";
 import UserSs from "@/components/home/UserSs";
 import OurPackages from "@/components/home/Ourpackages";
+import SeoPackages from "@/components/home/SeoPackages";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <AboutSection />
       <OurProcess />
       <OurPackages />
+      <SeoPackages />
       <TestimonialsSection />
       <UserSs />
       <FAQSection />

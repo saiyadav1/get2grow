@@ -1,75 +1,94 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Star } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 /* ─────────────────────────── DATA ─────────────────────────── */
 const packages = [
   {
     id: "core",
-    label: "G2G-STARTER",
-    labelColor: "#d4f26b",   // lime-yellow accent (matches screenshot)
-    tagline: "You create. We produce.",
-    description:
-      "You already have the footage. We turn it into polished, platform-ready content your brand can publish with confidence.",
+    label: "G2G STARTER",
+    labelColor: "#d4f26b",   // lime-yellow accent
+    tagline: "Startups & Personal Brands",
+    description: "",
+    price: "Rs. 35,000/month",
     features: [
-      "Starting at 20 short-form videos per month",
-      "5 carousels per month",
-      "Custom editing style for your brand",
-      "Thumbnails, captions, and design assets",
-      "Platform-native formatting",
-      "Dedicated team: editors, creatives, project manager, designer",
-      "Bi-weekly check-ins",
-      "Monthly performance report",
+      "8 Static Posts",
+      "4 Carousel Posts",
+      "4 Reels/Short-form Videos",
+      "Content Strategy",
+      "Basic Engagement Strategy",
+      "Captions & Copywriting",
+      "Monthly Posting",
+      "Hook & Scriptwriting",
+      "Monthly Analytics Report",
+      "Shared Team Support",
     ],
     cta: "Apply",
     ctaStyle: "outline" as const,
     highlight: false,
+    popular: false,
   },
   {
     id: "os",
-    label: "G2G-GROWTH",
-    labelColor: "#f5c842",   // amber accent
-    tagline: "Your entire content operation. Run by us.",
-    description:
-      "You show up. We handle everything else — strategy, scripting, creative direction, editing, and distribution. A full content department embedded in your workflow.",
+    label: "G2G GROWTH",
+    labelColor: "#22c55e",   // green highlight accent matching logo and theme
+    tagline: "Businesses Focused on Scaling",
+    description: "",
+    price: "Rs. 75,000 - 1.2L/month",
     features: [
-      "Everything in Core",
-      "Repeatable pre-production system",
-      "Content strategy",
-      "Creative direction",
-      "Scripting",
-      "Shoot direction",
-      "Multi-platform distribution",
+      "12 Static Posts",
+      "6 Carousel Posts",
+      "8 Reels/Short-form Videos",
+      "Content Strategy",
+      "Growth Engagement Strategy",
+      "Meta Ads Management",
+      "Google Ads Management",
+      "Retargeting Campaigns",
+      "Conversion Tracking",
+      "Brand Messaging & Positioning",
+      "Hooks & Scriptwriting",
+      "UGC / Promotional Content",
+      "Basic Website & Funnel Optimization",
+      "Dedicated Strategist",
     ],
     cta: "Apply",
     ctaStyle: "outline" as const,
     highlight: true,
+    popular: true,
   },
   {
     id: "studio",
-    label: "G2G-AUTHORITY",
+    label: "G2G AUTHORITY",
     labelColor: "#c4b5fd",   // violet accent
-    tagline: "Full-scale production for brands operating at volume.",
-    description:
-      "Your scope. Our infrastructure. For brands that need scale without sacrificing quality. We build a dedicated production system around your requirements.",
+    tagline: "High-Growth Brands & Founders",
+    description: "",
+    price: "Rs. 1.8L - 3L/month",
     features: [
-      "Everything in OS",
-      "Upwards of 100 curated videos a month",
-      "Dedicated clipping team",
-      "Best for enterprise projects",
+      "12+ Static Posts",
+      "12 Reels/Short-form Videos",
+      "Social Media Growth Plan (3 month)",
+      "Warm Traffic Conversion Plan",
+      "Paid Ad Copy (Google & FB)",
+      "Brand & Promotional Content",
+      "Website & Funnel Optimization",
+      "Personal Branding",
+      "LinkedIn Ghostwriting",
+      "Long-form Content",
+      "Dedicated Team Support",
     ],
     cta: "Apply",
     ctaStyle: "outline" as const,
-    highlight: true,
+    highlight: false,
+    popular: false,
   },
 ];
 
 /* ──────────────────────── COMPONENT ──────────────────────── */
 export default function OurPackages() {
   return (
-    <section className="py-24 md:py-32 relative overflow-hidden bg-black">
+    <section id="OurPackages" className="py-24 md:py-32 relative overflow-hidden bg-black">
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] bg-primary/10 blur-[140px] rounded-full pointer-events-none" />
 
@@ -128,6 +147,14 @@ function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
           : "border-white/8 bg-[#0e0e0e] hover:border-white/20"
         }`}
     >
+      {/* Decorative Star/Badge for popular */}
+      {pkg.popular && (
+        <div className="absolute top-5 right-5 flex items-center justify-center bg-primary/15 border border-primary/30 px-3 py-1 rounded-full text-xs font-black tracking-widest text-primary">
+          <Star className="w-3.5 h-3.5 fill-primary mr-1.5 shrink-0" />
+          POPULAR
+        </div>
+      )}
+
       {/* Tilted label badge */}
       <div className="mb-6">
         <span
@@ -144,9 +171,11 @@ function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
       </h3>
 
       {/* Description */}
-      <p className="text-gray-400 text-base leading-relaxed mb-6">
-        {pkg.description}
-      </p>
+      {pkg.description && (
+        <p className="text-gray-400 text-base leading-relaxed mb-6">
+          {pkg.description}
+        </p>
+      )}
 
       {/* Divider */}
       <div className="h-px w-full bg-white/8 mb-6" />
@@ -164,8 +193,15 @@ function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
         ))}
       </ul>
 
-      {/* CTA */}
+      {/* Price */}
       <div className="mt-8">
+        <div className="text-2xl font-black text-primary">
+          {pkg.price}
+        </div>
+      </div>
+
+      {/* CTA */}
+      <div className="mt-6">
         <button
           onClick={() => router.push("/contact-form")}
           className="w-full py-3 rounded-xl text-base font-bold tracking-wide transition-all duration-300

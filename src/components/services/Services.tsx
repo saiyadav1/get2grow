@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence, useSpring, useTransform } from 'framer-motion';
-import { Share2, Target, Sparkles, Video, UserCircle, Layout } from 'lucide-react';
+import { Share2, Target, Sparkles, Video, UserCircle, Layout, TrendingUp, Palette } from 'lucide-react';
 import Link from 'next/link';
 
 const servicesData = [
@@ -31,7 +31,7 @@ const servicesData = [
         id: "content-creation",
         title: "Content Creation",
         description: "We create content designed to stop attention and drive action.",
-        features: ["Short-form videos", "Reels editing", "Hooks & scripts", "UGC content", "Promotional content"],
+        features: ["Short-form videos", "Reels editing", "Hooks & scripts", "UGC content", "Promotional content","Long-form content"],
         icon: Video,
     },
     {
@@ -47,10 +47,24 @@ const servicesData = [
         description: "We build websites and landing pages designed to convert traffic into customers.",
         features: ["Landing pages", "Sales funnels", "Website copy", "Conversion optimization"],
         icon: Layout,
+    },
+    {
+        id: "seo",
+        title: "SEO",
+        description: "We optimize your search visibility to drive organic growth and capture high-intent customers.",
+        features: ["Keyword Research", "Competitor Research", "On-Page SEO", "Off-Page SEO", "Page Optimization", "Link Building"],
+        icon: TrendingUp,
+    },
+    {
+        id: "brand-creation",
+        title: "Brand Creation",
+        description: "We shape new brands from ground up, crafting compelling identities that build instant trust.",
+        features: ["Logo design", "Visual identity", "Brand guidelines", "Typography & palette", "Brand assets", "Collateral design"],
+        icon: Palette,
     }
 ];
 
-const angles = [-90, -30, 30, 90, 150, 210];
+const angles = [-90, -45, 0, 45, 90, 135, 180, 225];
 
 export default function Services() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -61,14 +75,14 @@ export default function Services() {
 
     // Premium Smooth Scroll Engine
     const smoothProgress = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
-    const circlePathLength = useTransform(smoothProgress, [0, 1], [0, 5 / 6]);
+    const circlePathLength = useTransform(smoothProgress, [0, 1], [0, 7 / 8]);
 
     const [activeIndex, setActiveIndex] = useState(0);
 
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
         // Intentional snappy threshold for index switching
-        const step = 1 / 6;
-        const index = Math.min(5, Math.floor(latest / step));
+        const step = 1 / 8;
+        const index = Math.min(7, Math.floor(latest / step));
         setActiveIndex(index);
     });
 
@@ -145,14 +159,14 @@ export default function Services() {
                         <div className="w-1/2 flex items-center justify-center relative">
                             <motion.div
                                 className="w-[500px] h-[500px] relative flex items-center justify-center"
-                                animate={{ rotate: activeIndex * 30 }}
+                                animate={{ rotate: activeIndex * 22.5 }}
                                 transition={{ type: "spring", stiffness: 60, damping: 20 }}
                                 style={{ willChange: "transform" }}
                             >
                                 {/* Center Core */}
                                 <motion.div
                                     className="absolute w-32 h-32 rounded-full border border-white/10 bg-black/60 backdrop-blur-2xl flex flex-col items-center justify-center gap-0 z-30 shadow-[0_0_50px_rgba(34,197,94,0.15)]"
-                                    animate={{ rotate: activeIndex * -30 }} // counter-rotate
+                                    animate={{ rotate: activeIndex * -22.5 }} // counter-rotate
                                     transition={{ type: "spring", stiffness: 60, damping: 20 }}
                                 >
                                     <div className="absolute inset-0 rounded-full border border-[#22c55e]/40 animate-[spin_8s_linear_infinite]"></div>
@@ -227,7 +241,7 @@ export default function Services() {
                                             animate={{
                                                 opacity: isRevealed ? 1 : 0,
                                                 scale: isRevealed ? (isActive ? 1.2 : 1) : 0.5,
-                                                rotate: activeIndex * -30, // counter rotate so icons stay upright
+                                                rotate: activeIndex * -22.5, // counter rotate so icons stay upright
                                                 x,
                                                 y,
                                             }}
