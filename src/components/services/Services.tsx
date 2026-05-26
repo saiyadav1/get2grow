@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence, useSpring, useTransform } from 'framer-motion';
-import { Share2, Target, Sparkles, Video, UserCircle, Layout, TrendingUp, Palette } from 'lucide-react';
+import { Share2, Target, Sparkles, Video, Layout, TrendingUp, Palette } from 'lucide-react';
 import Link from 'next/link';
 
 const servicesData = [
@@ -35,13 +35,6 @@ const servicesData = [
         icon: Video,
     },
     {
-        id: "personal-branding",
-        title: "Personal Branding",
-        description: "We help founders and experts build authority online.",
-        features: ["LinkedIn content", "Ghostwriting", "Thought leadership", "Personal brand strategy"],
-        icon: UserCircle,
-    },
-    {
         id: "website-funnels",
         title: "Website & Funnels",
         description: "We build websites and landing pages designed to convert traffic into customers.",
@@ -64,7 +57,7 @@ const servicesData = [
     }
 ];
 
-const angles = [-90, -45, 0, 45, 90, 135, 180, 225];
+const angles = [-90, -45, 0, 45, 90, 135, 180];
 
 export default function Services() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -75,14 +68,14 @@ export default function Services() {
 
     // Premium Smooth Scroll Engine
     const smoothProgress = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
-    const circlePathLength = useTransform(smoothProgress, [0, 1], [0, 7 / 8]);
+    const circlePathLength = useTransform(smoothProgress, [0, 1], [0, 6 / 7]);
 
     const [activeIndex, setActiveIndex] = useState(0);
 
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
         // Intentional snappy threshold for index switching
-        const step = 1 / 8;
-        const index = Math.min(7, Math.floor(latest / step));
+        const step = 1 / 7;
+        const index = Math.min(6, Math.floor(latest / step));
         setActiveIndex(index);
     });
 

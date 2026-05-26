@@ -99,12 +99,14 @@ export default function PortfolioSection() {
   }, []);
 
   const videos = [
-    "https://res.cloudinary.com/di6ic3zth/video/upload/q_auto/f_auto/v1778174038/1_REEL_40MB_axxi9e.mp4",
-    "https://res.cloudinary.com/di6ic3zth/video/upload/q_auto/f_auto/v1778174951/2_piusos.mp4",
-    "https://res.cloudinary.com/di6ic3zth/video/upload/q_auto/f_auto/v1778175135/3_p74xij.mp4",
-    "https://res.cloudinary.com/di6ic3zth/video/upload/q_auto/f_auto/v1778174038/1_REEL_40MB_axxi9e.mp4",
-    "https://res.cloudinary.com/di6ic3zth/video/upload/q_auto/f_auto/v1778174951/2_piusos.mp4",
-    "https://res.cloudinary.com/di6ic3zth/video/upload/q_auto/f_auto/v1778175135/3_p74xij.mp4",
+    "https://res.cloudinary.com/di6ic3zth/video/upload/q_auto/f_auto/v1779818497/1_REEL_40MB_bcn77q.mp4",
+    "https://res.cloudinary.com/di6ic3zth/video/upload/q_auto/f_auto/v1779818514/2_REEL_40MB_zq7l99.mp4",
+    "https://res.cloudinary.com/di6ic3zth/video/upload/q_auto/f_auto/v1779818535/3_REEL_40MB_dc2iw4.mp4",
+    "https://res.cloudinary.com/di6ic3zth/video/upload/q_auto/f_auto/v1779812324/Why_Webinars_Fail_FINAL_G2G_-_Rahman_rnsnlz.mp4",
+    "https://res.cloudinary.com/di6ic3zth/video/upload/q_auto/f_auto/v1779818497/1_REEL_40MB_bcn77q.mp4",
+    "https://res.cloudinary.com/di6ic3zth/video/upload/q_auto/f_auto/v1779818514/2_REEL_40MB_zq7l99.mp4",
+    "https://res.cloudinary.com/di6ic3zth/video/upload/q_auto/f_auto/v1779818535/3_REEL_40MB_dc2iw4.mp4",
+    "https://res.cloudinary.com/di6ic3zth/video/upload/q_auto/f_auto/v1779812324/Why_Webinars_Fail_FINAL_G2G_-_Rahman_rnsnlz.mp4"
   ];
 
   const toggleMute = (e: React.MouseEvent) => {
