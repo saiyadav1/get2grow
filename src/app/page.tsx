@@ -21,7 +21,7 @@ export default function Home() {
       <Hero />
       <StatsChips />
       <LogoMarquee />
-      <Intro />
+      {/* <Intro /> */}
       <PortfolioSection />
       <Services />
       <AboutSection />
