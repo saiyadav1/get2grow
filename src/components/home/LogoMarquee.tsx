@@ -23,6 +23,7 @@ export default function LogoMarquee() {
                 src={logo.src}
                 alt={logo.alt}
                 fill
+                sizes="140px"
                 className="object-contain"
             />
         </div>

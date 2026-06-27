@@ -85,8 +85,7 @@ export default function Hero() {
                                 <video
                                     src="https://res.cloudinary.com/di6ic3zth/video/upload/q_auto/f_auto/v1779811160/Theodore_video_1_todoce.mp4"
                                     controls
-                                    className="w-full h-auto object-cover"
-                                    style={{ minHeight: '500px' }}
+                                    className="w-full h-auto object-cover min-h-[300px] md:min-h-[400px] lg:min-h-[500px]"
                                     poster="https://res.cloudinary.com/di6ic3zth/video/upload/q_auto/f_auto/v1779811160/Theodore_video_1_todoce.jpg"
                                     onPlay={() => setIsPlaying(true)}
                                     onPause={() => setIsPlaying(false)}

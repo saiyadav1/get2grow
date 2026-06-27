@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import {
   motion,
   useScroll,
@@ -137,6 +137,19 @@ export default function Services() {
     setActiveIndex(index);
   });
 
+  const [mounted, setMounted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   const radius = 220;
 
   const contentVariants = {
@@ -174,65 +187,68 @@ export default function Services() {
       ></div>
 
       {/* Mobile View */}
-      <div className="lg:hidden flex flex-col gap-6 w-full px-5 py-24 relative z-10">
-        <div className="mb-10">
-          <p className="text-sm font-medium text-[#22c55e] uppercase tracking-[0.2em] mb-4 flex items-center gap-4">
-            <span className="w-8 h-[1px] bg-[#22c55e]"></span>
-            Our Expertise
-          </p>
-          <h2 className="text-4xl sm:text-5xl font-semibold mb-6 text-[#f9f8f6] tracking-tight">
-            What we
-            <br />
-            actually do.
-          </h2>
-        </div>
-        {servicesData.map((service) => (
-          <div
-            key={service.id}
-            className="bg-[#1f1f1f] rounded-2xl p-6 sm:p-8 border border-white/5 relative overflow-hidden shadow-2xl"
-          >
-            <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#22c55e]/20 blur-3xl rounded-full pointer-events-none"></div>
-
-            <service.icon className="w-10 h-10 text-[#22c55e] mb-5" />
-            <h3 className="text-2xl font-semibold text-white mb-3 tracking-wide">
-              {service.title}
-            </h3>
-            <p className="text-gray-400 mb-6 text-base leading-relaxed">
-              {service.description}
+      {(!mounted || isMobile) && (
+        <div className="lg:hidden flex flex-col gap-6 w-full px-5 py-24 relative z-10">
+          <div className="mb-10">
+            <p className="text-sm font-medium text-[#22c55e] uppercase tracking-[0.2em] mb-4 flex items-center gap-4">
+              <span className="w-8 h-[1px] bg-[#22c55e]"></span>
+              Our Expertise
             </p>
-            <ul className="space-y-4 mb-8">
-              {service.features.map((feature, idx) => (
-                <li
-                  key={idx}
-                  className="flex items-start gap-3 text-gray-300 text-sm sm:text-base"
-                >
-                  <svg
-                    className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2.5}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  {feature}
-                </li>
-              ))}
-            </ul>
+            <h2 className="text-4xl sm:text-5xl font-semibold mb-6 text-[#f9f8f6] tracking-tight">
+              What we
+              <br />
+              actually do.
+            </h2>
           </div>
-        ))}
-      </div>
+          {servicesData.map((service) => (
+            <div
+              key={service.id}
+              className="bg-[#1f1f1f] rounded-2xl p-6 sm:p-8 border border-white/5 relative overflow-hidden shadow-2xl"
+            >
+              <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#22c55e]/20 blur-3xl rounded-full pointer-events-none"></div>
+
+              <service.icon className="w-10 h-10 text-[#22c55e] mb-5" />
+              <h3 className="text-2xl font-semibold text-white mb-3 tracking-wide">
+                {service.title}
+              </h3>
+              <p className="text-gray-400 mb-6 text-base leading-relaxed">
+                {service.description}
+              </p>
+              <ul className="space-y-4 mb-8">
+                {service.features.map((feature, idx) => (
+                  <li
+                    key={idx}
+                    className="flex items-start gap-3 text-gray-300 text-sm sm:text-base"
+                  >
+                    <svg
+                      className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2.5}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Desktop View (Scroll-Driven Radial Wheel) */}
       <div
         ref={containerRef}
-        className="hidden lg:block h-[600vh] relative z-10"
+        className={`${mounted && !isMobile ? "block" : "hidden"} lg:block h-[600vh] relative z-10`}
       >
-        <div className="sticky top-0 h-screen w-full flex items-center overflow-hidden">
+        {mounted && !isMobile && (
+          <div className="sticky top-0 h-screen w-full flex items-center overflow-hidden">
           <div className="container mx-auto max-w-7xl flex w-full relative z-10 px-8">
             {/* Left Column - Radial Wheel */}
             <div className="w-1/2 flex items-center justify-center relative">
@@ -475,6 +491,7 @@ export default function Services() {
             </div>
           </div>
         </div>
+      )}
       </div>
     </section>
   );

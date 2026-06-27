@@ -23,6 +23,8 @@ export default function Navbar() {
               src="/assets/g2g_logo.png"
               alt="Get 2 Grow Logo"
               fill
+              priority
+              sizes="48px"
               className="object-cover "
             />
           </div>

@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { name, service, message, bookingUid } = body;
+    const { name, service, message, bookingUid, type, businessName, phone, email } = body;
 
     const apiKey = process.env.g2g_contact_form;
 
@@ -12,11 +12,29 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Server configuration error" }, { status: 500 });
     }
 
+    // Handle Growth Audit form submissions
+    if (type === "growth_audit") {
+      // Log the growth audit submission (you can integrate with email service, CRM, etc.)
+      console.log("Growth Audit Submission:", {
+        name,
+        businessName,
+        phone,
+        email,
+        timestamp: new Date().toISOString(),
+      });
+
+      // TODO: Integrate with your email service (SendGrid, Mailgun, etc.) or CRM
+      // Example: Send confirmation email to user and notification email to team
+
+      return NextResponse.json({
+        success: true,
+        message: "Growth audit request received. We'll contact you soon!",
+      });
+    }
+
+    // Handle regular contact form submissions
     if (!bookingUid) {
       console.warn("No booking UID provided. Storing data might fail if not linked to a booking.");
-      // We could potentially create a new booking or lead here if Cal.com supported it,
-      // but without a booking UID from the iframe, we can't update the specific meeting.
-      // We will still return success to the user so the UI can proceed.
       return NextResponse.json({ success: true, warning: "No booking UID provided" });
     }
 
