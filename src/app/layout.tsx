@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import GrowthAuditModal from "@/components/GrowthAuditModal";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const bricolageGrotesque = Bricolage_Grotesque({
   variable: "--font-bricolage",
@@ -87,6 +88,12 @@ export default function RootLayout({
       >
         <GrowthAuditModal />
         {children}
+
+         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <GoogleAnalytics
+            gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}
+          />
+        )}
       </body>
     </html>
   );
