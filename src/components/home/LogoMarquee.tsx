@@ -9,15 +9,14 @@ export default function LogoMarquee() {
         { src: "/assets/brands/property.jpeg", alt: "Property" },
         { src: "/assets/brands/rani.png", alt: "Rani", needsBg: true },
         { src: "/assets/brands/sarvejana.jpeg", alt: "Sarvejana" },
-        { src: "/assets/brands/the_next_round.jpeg", alt: "The Next Round" },
+        //{ src: "/assets/brands/the_next_round.jpeg", alt: "The Next Round" },
     ];
 
     const LogoItem = ({ logo, id }: { logo: (typeof logos)[number]; id: string }) => (
         <div
             key={id}
-            className={`relative w-[140px] h-[60px] flex-shrink-0 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 ${
-                logo.needsBg ? "bg-white rounded-lg px-2 py-1" : ""
-            }`}
+            className={`relative w-[140px] h-[60px] flex-shrink-0 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 ${logo.needsBg ? "bg-white rounded-lg px-2 py-1" : ""
+                }`}
         >
             <Image
                 src={logo.src}
