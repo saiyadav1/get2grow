@@ -4,13 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+import { usePathname } from "next/navigation";
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   const navLinks = [
-    { name: "About", href: "#section_problems" },
-    { name: "Services", href: "#services" },
-    { name: "Testimonials", href: "#section_testimonials" },
+    { name: "About", href: isHome ? "#section_problems" : "/#section_problems" },
+    { name: "Services", href: isHome ? "#services" : "/#services" },
+    { name: "Testimonials", href: isHome ? "#section_testimonials" : "/#section_testimonials" },
+    { name: "Blog", href: "/blog" },
   ];
 
   return (

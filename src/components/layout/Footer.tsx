@@ -4,7 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 
+import { usePathname } from "next/navigation";
+
 export default function Footer() {
+    const pathname = usePathname();
+    const isHome = pathname === "/";
+
     return (
         <footer className="bg-brand-black text-white pt-24 pb-12">
             <div className="container mx-auto px-6 max-w-7xl">
@@ -57,9 +62,10 @@ export default function Footer() {
                     <div>
                         <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-8">Explore</h4>
                         <ul className="space-y-4 font-medium">
-                            <li><Link href="#services" className="hover:text-primary transition-colors">Services</Link></li>
-                            <li><Link href="#section_testimonials" className="hover:text-primary transition-colors">Testimonials</Link></li>
-                            <li><Link href="#OurPackages" className="hover:text-primary transition-colors">Our Packages</Link></li>
+                            <li><Link href="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
+                            <li><Link href={isHome ? "#services" : "/#services"} className="hover:text-primary transition-colors">Services</Link></li>
+                            <li><Link href={isHome ? "#section_testimonials" : "/#section_testimonials"} className="hover:text-primary transition-colors">Testimonials</Link></li>
+                            <li><Link href={isHome ? "#OurPackages" : "/#OurPackages"} className="hover:text-primary transition-colors">Our Packages</Link></li>
                         </ul>
                     </div>
 
@@ -67,9 +73,9 @@ export default function Footer() {
                     <div>
                         <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-8">Agency</h4>
                         <ul className="space-y-4 font-medium">
-                            <li><Link href="#section_problems" className="hover:text-primary transition-colors">About Us</Link></li>
+                            <li><Link href={isHome ? "#section_problems" : "/#section_problems"} className="hover:text-primary transition-colors">About Us</Link></li>
                             {/* <li><Link href="#process" className="hover:text-primary transition-colors">Our Process</Link></li> */}
-                            <li><Link href="#faq" className="hover:text-primary transition-colors">FAQ</Link></li>
+                            <li><Link href={isHome ? "#faq" : "/#faq"} className="hover:text-primary transition-colors">FAQ</Link></li>
                         </ul>
                     </div>
 
