@@ -7,29 +7,14 @@ import { ArrowRight, Clock, Calendar, Mail } from "lucide-react";
 export default function BlogHubContent() {
   const secondaryPosts = [
     {
-      title: "Conversion Rate Optimization: Turning Clicks into Customers",
-      excerpt: "Uncover the psychological triggers and UI design patterns that drive high-converting landing pages. Learn how to optimize your funnel for maximum ROI.",
-      category: "CRO",
-      readTime: "6 min read",
-      date: "Coming Soon",
-      image: "/assets/webapi.png",
-    },
-    {
-      title: "Email Marketing in 2026: The Power of AI-Driven Personalization",
-      excerpt: "Explore the new era of marketing automation. How predictive analysis and hyper-personalized sequences are helping brands double their repeat sales.",
-      category: "Automation",
-      readTime: "7 min read",
-      date: "Coming Soon",
-      image: "/assets/emailmarketing.jpg",
-    },
-    {
-      title: "Maximizing ROI: A Combined SEO and Paid Advertising Blueprint",
-      excerpt: "Stop choosing between SEO and Paid Ads. Discover the hybrid strategy that leverages paid search data to dominate organic rankings.",
+      title: "Digital Marketers: What They Do and How They Help Businesses Grow",
+      excerpt: "Learn how digital marketers help businesses increase traffic, generate quality leads, improve brand visibility, and boost online sales with proven strategies.",
       category: "Strategy",
-      readTime: "5 min read",
-      date: "Coming Soon",
-      image: "/assets/advertising.jpg",
-    },
+      readTime: "10 min read",
+      date: "July 20, 2026",
+      image: "/assets/blog/digital-marketers-business-growth.jpg",
+      href: "/blog/digital-marketers"
+    }
   ];
 
   return (
@@ -69,7 +54,7 @@ export default function BlogHubContent() {
             <div className="relative w-full lg:w-1/2 h-[300px] sm:h-[400px] lg:h-auto overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-[#121216] to-transparent z-10" />
               <Image
-                src="/assets/analytics&tracking.jpg"
+                src="/assets/blog/digital-marketing-for-small-business-2026-growth-guide.jpg"
                 alt="Digital Marketing Guide 2026"
                 fill
                 priority
@@ -120,7 +105,7 @@ export default function BlogHubContent() {
         </section>
 
         {/* Secondary Articles Section */}
-        {/* <section className="py-16 bg-black/40 border-t border-b border-white/5">
+        <section className="py-16 bg-black/40 border-t border-b border-white/5">
           <div className="container mx-auto px-6 max-w-7xl">
             <div className="mb-12">
               <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tighter">Insights & Strategy</h2>
@@ -128,50 +113,67 @@ export default function BlogHubContent() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {secondaryPosts.map((post, idx) => (
-                <div
-                  key={idx}
-                  className="group bg-[#121216]/60 border border-white/5 rounded-2xl overflow-hidden hover:border-white/15 transition-all duration-300 flex flex-col justify-between"
-                >
-                  <div>
-                    <div className="relative h-[200px] w-full overflow-hidden bg-gray-900">
-                      <div className="absolute inset-0 bg-black/40 z-10 transition-opacity duration-300 group-hover:opacity-20" />
-                      <Image
-                        src={post.image}
-                        alt={post.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="object-cover filter grayscale opacity-70 group-hover:scale-105 group-hover:filter-none transition-all duration-500"
-                      />
-                      <span className="absolute bottom-4 left-4 z-20 px-3 py-1 bg-white/10 backdrop-blur-md border border-white/10 text-white font-bold uppercase tracking-widest text-[9px] rounded-full">
-                        {post.category}
+              {secondaryPosts.map((post, idx) => {
+                const isComingSoon = post.date === "Coming Soon";
+                const CardContent = (
+                  <>
+                    <div>
+                      <div className="relative h-[200px] w-full overflow-hidden bg-gray-900">
+                        <div className="absolute inset-0 bg-black/40 z-10 transition-opacity duration-300 group-hover:opacity-20" />
+                        <Image
+                          src={post.image}
+                          alt={post.title}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          className="object-cover filter grayscale opacity-70 group-hover:scale-105 group-hover:filter-none transition-all duration-500"
+                        />
+                        <span className="absolute bottom-4 left-4 z-20 px-3 py-1 bg-white/10 backdrop-blur-md border border-white/10 text-white font-bold uppercase tracking-widest text-[9px] rounded-full">
+                          {post.category}
+                        </span>
+                      </div>
+
+                      <div className="p-6">
+                        <div className="flex items-center gap-4 text-gray-500 text-[10px] font-bold uppercase tracking-widest mb-4">
+                          <span className="flex items-center gap-1"><Clock size={12} /> {post.readTime}</span>
+                          <span className={`px-2 py-0.5 rounded text-[9px] font-semibold ${isComingSoon ? 'bg-primary/10 text-primary' : 'bg-green-500/10 text-green-400'}`}>{post.date}</span>
+                        </div>
+                        <h3 className="text-lg font-bold uppercase tracking-tight mb-3 text-white group-hover:text-primary transition-colors line-clamp-2">
+                          {post.title}
+                        </h3>
+                        <p className="text-gray-400 text-xs leading-relaxed line-clamp-3">
+                          {post.excerpt}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="p-6 pt-0">
+                      <span className="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-widest text-primary/70 group-hover:text-primary cursor-pointer transition-colors mt-4">
+                        {isComingSoon ? "Notify Me" : "Read Guide"} <ArrowRight size={12} className="transition-transform group-hover:translate-x-1" />
                       </span>
                     </div>
+                  </>
+                );
 
-                    <div className="p-6">
-                      <div className="flex items-center gap-4 text-gray-500 text-[10px] font-bold uppercase tracking-widest mb-4">
-                        <span className="flex items-center gap-1"><Clock size={12} /> {post.readTime}</span>
-                        <span className="px-2 py-0.5 rounded bg-primary/10 text-primary text-[9px] font-semibold">{post.date}</span>
-                      </div>
-                      <h3 className="text-lg font-bold uppercase tracking-tight mb-3 text-white group-hover:text-primary transition-colors line-clamp-2">
-                        {post.title}
-                      </h3>
-                      <p className="text-gray-400 text-xs leading-relaxed line-clamp-3">
-                        {post.excerpt}
-                      </p>
-                    </div>
+                return isComingSoon ? (
+                  <div
+                    key={idx}
+                    className="group bg-[#121216]/60 border border-white/5 rounded-2xl overflow-hidden hover:border-white/15 transition-all duration-300 flex flex-col justify-between"
+                  >
+                    {CardContent}
                   </div>
-
-                  <div className="p-6 pt-0">
-                    <span className="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-widest text-primary/70 group-hover:text-primary cursor-pointer transition-colors mt-4">
-                      Notify Me <ArrowRight size={12} className="transition-transform group-hover:translate-x-1" />
-                    </span>
-                  </div>
-                </div>
-              ))}
+                ) : (
+                  <Link
+                    key={idx}
+                    href={post.href}
+                    className="group bg-[#121216]/60 border border-white/5 hover:border-primary/40 rounded-2xl overflow-hidden hover:shadow-[0_0_30px_rgba(34,197,94,0.05)] transition-all duration-300 flex flex-col justify-between"
+                  >
+                    {CardContent}
+                  </Link>
+                );
+              })}
             </div>
           </div>
-        </section> */}
+        </section>
 
         {/* Newsletter Signup Section */}
         {/* <section className="py-20 container mx-auto px-6 max-w-4xl text-center">

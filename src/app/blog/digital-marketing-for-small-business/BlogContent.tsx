@@ -261,6 +261,18 @@ export default function BlogContent() {
           {/* Middle Column: Detailed Post Content */}
           <article className="lg:col-span-6 text-gray-300 leading-relaxed text-sm sm:text-base font-medium space-y-12">
             
+            {/* Featured Image */}
+            <div className="relative w-full aspect-[16/10] rounded-3xl overflow-hidden border border-white/10 hover:border-primary/30 transition-all duration-300 shadow-[0_0_30px_rgba(255,255,255,0.02)]">
+              <Image
+                src="/assets/blog/digital-marketing-for-small-business-2026-growth-guide.jpg"
+                alt="Digital marketing for small business in 2026 featuring SEO, social media, content marketing, email marketing, and paid ads."
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover"
+              />
+            </div>
+
             {/* Introduction Section */}
             <section id="intro" className="scroll-mt-28 space-y-6">
               <h2 className="text-2xl font-black uppercase tracking-tighter text-white flex items-center gap-3">
@@ -427,6 +439,17 @@ export default function BlogContent() {
                 </p>
               </div>
 
+              {/* Image 1: SEO Improvement */}
+              <div className="relative w-full aspect-[16/10] rounded-2xl overflow-hidden border border-white/10">
+                <Image
+                  src="/assets/blog/small-business-seo-improvement.jpg"
+                  alt="Small business owner improving website SEO with keyword rankings, search analytics, and organic traffic growth."
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+
               {/* Strategy 2 */}
               <div className="space-y-4">
                 <h3 className="text-lg font-black uppercase tracking-tight text-white flex items-center gap-2 border-b border-white/5 pb-2">
@@ -449,6 +472,17 @@ export default function BlogContent() {
                 <p>
                   Posting consistently keeps your brand visible and builds stronger, long-term customer relationships.
                 </p>
+              </div>
+
+              {/* Image 2: Social Media & Content Strategy */}
+              <div className="relative w-full aspect-[16/10] rounded-2xl overflow-hidden border border-white/10">
+                <Image
+                  src="/assets/blog/social-media-content-strategy.jpg"
+                  alt="Digital marketer creating a content marketing and social media strategy to grow a small business online."
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
               </div>
 
               {/* Strategy 3 */}
@@ -582,6 +616,17 @@ export default function BlogContent() {
                 ))}
               </div>
             </section>
+
+            {/* Image 3: Business Team Digital Marketing Strategy */}
+            <div className="relative w-full aspect-[16/10] rounded-2xl overflow-hidden border border-white/10">
+              <Image
+                src="/assets/blog/business-team-digital-marketing-strategy.jpg"
+                alt="Business team planning a digital marketing strategy with SEO, Google Ads, content marketing, email marketing, and analytics."
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
 
             {/* How to Build Section */}
             <section id="how-to-build" className="scroll-mt-28 space-y-8">
