@@ -7,6 +7,15 @@ import { ArrowRight, Clock, Calendar, Mail } from "lucide-react";
 export default function BlogHubContent() {
   const secondaryPosts = [
     {
+      title: "Digital Marketing Agency Near Me: How to Choose the Right Partner",
+      excerpt: "Looking for a digital marketing agency near me? Discover expert SEO, PPC, social media, and web marketing services to grow your business today.",
+      category: "Agency",
+      readTime: "12 min read",
+      date: "August 3, 2026",
+      image: "/assets/blog/agency-near-me-featured.jpg",
+      href: "/blog/digital-marketing-agency-near-me"
+    },
+    {
       title: "Digital Marketers: What They Do and How They Help Businesses Grow",
       excerpt: "Learn how digital marketers help businesses increase traffic, generate quality leads, improve brand visibility, and boost online sales with proven strategies.",
       category: "Strategy",
