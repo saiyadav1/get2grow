@@ -7,6 +7,15 @@ import { ArrowRight, Clock, Calendar, Mail } from "lucide-react";
 export default function BlogHubContent() {
   const secondaryPosts = [
     {
+      title: "Best Digital Marketing Agency Hyderabad: How to Choose the Right Partner",
+      excerpt: "Looking for the best digital marketing agency Hyderabad? Discover expert SEO, PPC, social media, branding and lead generation services that grow your business.",
+      category: "Agency",
+      readTime: "12 min read",
+      date: "August 12, 2026",
+      image: "/assets/blog/hyderabad-digital-marketing-strategy.png",
+      href: "/blog/best-digital-marketing-agency-hyderabad"
+    },
+    {
       title: "Digital Marketing Agency Near Me: How to Choose the Right Partner",
       excerpt: "Looking for a digital marketing agency near me? Discover expert SEO, PPC, social media, and web marketing services to grow your business today.",
       category: "Agency",
