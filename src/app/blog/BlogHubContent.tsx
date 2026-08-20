@@ -7,6 +7,33 @@ import { ArrowRight, Clock, Calendar, Mail } from "lucide-react";
 export default function BlogHubContent() {
   const secondaryPosts = [
     {
+      title: "Meta Ads for Lead Generation: Proven Growth Guide",
+      excerpt: "Learn how Meta Ads for Lead Generation can attract qualified prospects, reduce wasted ad spend, and turn social media attention into real business opportunities.",
+      category: "Paid Ads",
+      readTime: "10 min read",
+      date: "August 20, 2026",
+      image: "/assets/blog/meta-ads-for-lead-generation-featured.jpg",
+      href: "/blog/meta-ads-for-lead-generation"
+    },
+    {
+      title: "Local SEO for Small Business: Proven Growth Guide",
+      excerpt: "Learn local SEO for small business with practical strategies to rank higher, attract nearby customers, improve Google visibility, and generate more leads.",
+      category: "SEO",
+      readTime: "10 min read",
+      date: "August 20, 2026",
+      image: "/assets/blog/local-seo-for-small-business-featured.jpg",
+      href: "/blog/local-seo-for-small-business"
+    },
+    {
+      title: "Website Design Company Hyderabad: How to Choose the Right Agency",
+      excerpt: "Need a website that brings leads, not just clicks? Learn how to choose a website design company in Hyderabad for growth, SEO and conversions.",
+      category: "Design",
+      readTime: "12 min read",
+      date: "August 20, 2026",
+      image: "/assets/blog/website-design-company-hyderabad-featured.jpg",
+      href: "/blog/website-design-company-hyderabad"
+    },
+    {
       title: "Digital Marketing Services: The Complete Guide to Growing Your Business Online",
       excerpt: "Looking for digital marketing services? Learn which strategies drive traffic, leads, sales, and long-term growth—and how to choose the right agency.",
       category: "Strategy",
