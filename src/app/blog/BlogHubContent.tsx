@@ -7,6 +7,15 @@ import { ArrowRight, Clock, Calendar, Mail } from "lucide-react";
 export default function BlogHubContent() {
   const secondaryPosts = [
     {
+      title: "Social Media Marketing Agency Hyderabad: How to Choose the Right Partner for Your Business",
+      excerpt: "Looking for the right social media marketing agency in Hyderabad? Learn what services matter, what questions to ask, and how to choose the best strategic partner.",
+      category: "Social Media",
+      readTime: "14 min read",
+      date: "August 29, 2026",
+      image: "/assets/blog/social-media-marketing-agency-hyderabad-featured.jpg",
+      href: "/blog/social-media-marketing-agency-hyderabad"
+    },
+    {
       title: "Meta Ads for Lead Generation: Proven Growth Guide",
       excerpt: "Learn how Meta Ads for Lead Generation can attract qualified prospects, reduce wasted ad spend, and turn social media attention into real business opportunities.",
       category: "Paid Ads",
