@@ -7,6 +7,15 @@ import { ArrowRight, Clock, Calendar, Mail } from "lucide-react";
 export default function BlogHubContent() {
   const secondaryPosts = [
     {
+      title: "Google Ads Agency Hyderabad: How to Choose the Right Partner for Growth",
+      excerpt: "Looking for a Google Ads agency in Hyderabad? Learn how expert PPC management can help you generate qualified leads, sales, and measurable growth.",
+      category: "Paid Ads",
+      readTime: "11 min read",
+      date: "August 31, 2026",
+      image: "/assets/blog/google-ads-agency-hyderabad-featured.jpg",
+      href: "/blog/google-ads-agency-hyderabad"
+    },
+    {
       title: "Social Media Marketing Agency Hyderabad: How to Choose the Right Partner for Your Business",
       excerpt: "Looking for the right social media marketing agency in Hyderabad? Learn what services matter, what questions to ask, and how to choose the best strategic partner.",
       category: "Social Media",
