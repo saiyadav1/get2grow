@@ -7,6 +7,42 @@ import { ArrowRight, Clock, Calendar, Mail } from "lucide-react";
 export default function BlogHubContent() {
   const secondaryPosts = [
     {
+      title: "How Much Does SEO Cost in Hyderabad? 2026 Guide",
+      excerpt: "Wondering how much SEO costs in Hyderabad? Explore realistic pricing, packages, services, ROI and tips for choosing the right SEO agency.",
+      category: "SEO",
+      readTime: "12 min read",
+      date: "September 8, 2026",
+      image: "/assets/blog/how-much-does-seo-cost-in-hyderabad-featured.jpg",
+      href: "/blog/how-much-does-seo-cost-in-hyderabad"
+    },
+    {
+      title: "How to Get More Leads for Your Business: 15 Proven Ways",
+      excerpt: "Learn how to get more leads for your business with proven SEO, paid ads, social media, landing pages, and follow-up strategies that drive growth.",
+      category: "Growth",
+      readTime: "16 min read",
+      date: "September 8, 2026",
+      image: "/assets/blog/how-to-get-more-leads-for-my-business-featured.jpg",
+      href: "/blog/how-to-get-more-leads-for-my-business"
+    },
+    {
+      title: "SEO vs Google Ads: Which Is Better for Your Business?",
+      excerpt: "SEO vs Google Ads: discover the real differences in cost, speed, leads and ROI. Learn which strategy makes sense for your business today.",
+      category: "Strategy",
+      readTime: "13 min read",
+      date: "September 8, 2026",
+      image: "/assets/blog/seo-vs-google-ads-featured.jpg",
+      href: "/blog/seo-vs-google-ads"
+    },
+    {
+      title: "SEO Services in Hyderabad That Drive Real Growth",
+      excerpt: "Get SEO services in Hyderabad built to increase rankings, organic traffic and qualified leads. Explore G2G’s data-driven SEO strategies today.",
+      category: "SEO",
+      readTime: "14 min read",
+      date: "September 8, 2026",
+      image: "/assets/blog/seo-services-in-hyderabad-featured.jpg",
+      href: "/blog/seo-services-in-hyderabad"
+    },
+    {
       title: "Google Ads Agency Hyderabad: How to Choose the Right Partner for Growth",
       excerpt: "Looking for a Google Ads agency in Hyderabad? Learn how expert PPC management can help you generate qualified leads, sales, and measurable growth.",
       category: "Paid Ads",

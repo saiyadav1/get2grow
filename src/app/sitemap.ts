@@ -18,6 +18,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog/digital-marketers",
     "/blog/best-digital-marketing-agency-hyderabad",
     "/blog/social-media-marketing-agency-hyderabad",
+    "/blog/google-ads-agency-hyderabad",
+    "/blog/seo-services-in-hyderabad",
+    "/blog/how-much-does-seo-cost-in-hyderabad",
+    "/blog/how-to-get-more-leads-for-my-business",
+    "/blog/seo-vs-google-ads",
   ];
 
   return routes.map((route) => ({
