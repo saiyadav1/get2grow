@@ -7,6 +7,24 @@ import { ArrowRight, Clock, Calendar, Mail } from "lucide-react";
 export default function BlogHubContent() {
   const secondaryPosts = [
     {
+      title: "Best Advertising Agency in Hyderabad: How to Choose the Right Partner",
+      excerpt: "Looking for the best advertising agency in Hyderabad? Discover how G2G Media House helps brands generate leads, sales and measurable growth.",
+      category: "Paid Media",
+      readTime: "15 min read",
+      date: "September 14, 2026",
+      image: "/assets/blog/best-advertising-agency-in-hyderabad-featured.jpg",
+      href: "/blog/best-advertising-agency-in-hyderabad"
+    },
+    {
+      title: "SEO Company in Hyderabad: How to Choose the Right SEO Partner",
+      excerpt: "Looking for an SEO company in Hyderabad? Get tailored SEO strategies, technical optimization, content and link building designed to grow traffic and leads.",
+      category: "SEO",
+      readTime: "14 min read",
+      date: "September 14, 2026",
+      image: "/assets/blog/seo-company-in-hyderabad-featured.jpg",
+      href: "/blog/seo-company-in-hyderabad"
+    },
+    {
       title: "How Much Does SEO Cost in Hyderabad? 2026 Guide",
       excerpt: "Wondering how much SEO costs in Hyderabad? Explore realistic pricing, packages, services, ROI and tips for choosing the right SEO agency.",
       category: "SEO",

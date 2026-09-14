@@ -23,6 +23,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog/how-much-does-seo-cost-in-hyderabad",
     "/blog/how-to-get-more-leads-for-my-business",
     "/blog/seo-vs-google-ads",
+    "/blog/seo-company-in-hyderabad",
+    "/blog/best-advertising-agency-in-hyderabad",
   ];
 
   return routes.map((route) => ({
